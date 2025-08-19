@@ -1,0 +1,73 @@
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), 
+    url(../fonts/Pretendard-Regular.woff2) format('woff2'), 
+    url(../fonts/Pretendard-Regular.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), 
+    url(../fonts/Pretendard-Bold.woff2) format('woff2'), 
+    url(../fonts/Pretendard-Bold.woff) format('woff');
+}
+/* 와일드카드 : 모든 태그를 지칭한다. body보다 상위에 위치 */
+*{
+margin: 0;
+padding: 0;
+}
+/* 주석 - 설명글
+Body 태그는 모든 태그를 감싸는 태그. 글자의 기본 스타일을 줌.
+글자 스타일은 상속가능. */
+body {
+    font-family: 'Pretendard';
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5; /* 행간 글자크기의 1.5배 */
+    color: #555555;
+
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto; /* 가운데 정렬 */
+}
+.eng {
+    margin: 123px 0px 0px 0px;
+}
+.eng h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #1d1d1d;
+}
+.eng .sub_tit{
+    font-size: 24px;
+    color: #1d1d1d;
+    margin:30px 0 12px 0
+}
+.eng strong {
+    color: #0178f1;
+    font-weight: 700;
+}
+.env  {
+    text-align: center;
+    margin: 126px 0px 0px 0px;
+}
+.env h1 {
+    font-size: 60px;
+    font-weight: 700;
+    color: #d81408;
+}
+.env .sub_tit {
+    font-weight: 700;
+    color: #1d1d1d;
+    margin:31px 0 13px 0
+}
+.env strong {
+    color: #d81408;
+    font-weight: 700;
+    text-decoration: underline;
+}
