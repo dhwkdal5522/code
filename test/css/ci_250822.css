@@ -111,7 +111,7 @@
     display: flex;/* 내 안에 있는 h3와 p좌우 배치*/
 }
 .overview .list ul li:last-child {
-    border-bottom: 1px solid D#ededed;
+    border-bottom: 1px solid #ededed;
 }
 .overview .list ul li h3 {
     font-weight: 700;
