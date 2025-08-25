@@ -1,0 +1,50 @@
+@import url(common.css);
+.global {
+    margin: 113px 0 0 0;
+}
+.global h1 {
+    font-size: 40px;
+    color: #1d1d1d;
+    font-weight: 700;
+    margin: 0 0 17px 0;
+}
+.global strong {
+    font-weight: 700;
+    color: #00b900;
+}
+.global p {
+    margin: 8px 0 32px 0;
+}
+.global a {
+    border: 1px solid #00b900;
+    padding: 5px 29px 5px 29px;
+    display: inline-block;
+    color: #00b900;
+}
+.global .photo {
+    margin: 42px 0 0 0;
+}
+.stickers{
+    background: url(../images/stickers_1.jpg) no-repeat center center ;
+    box-sizing: border-box;
+    min-height: 639px;
+    color: #fff;
+    margin: 90px 0 0 0;
+    text-align: center;
+}
+.stickers h1 { 
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    padding: 115px 0 17px 0;
+}
+.stickers a {
+    border: 1px solid #fff;
+    padding: 5px 29px 5px 29px;
+    display: inline-block;
+    margin: 32px 0 0 0;
+}
+.stickers .photo {
+    margin: 39px 0 0 0;
+}
+
