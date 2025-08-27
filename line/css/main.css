@@ -36,7 +36,7 @@
 .stickers{
     background: url(../images/stickers_1.jpg) no-repeat center center / cover;
     box-sizing: border-box;
-    min-height: 639px;
+    height: 639px;
     color: #fff;
     margin: 90px 0 0 0;
     text-align: center;
