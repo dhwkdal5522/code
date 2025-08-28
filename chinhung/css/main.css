@@ -78,7 +78,7 @@ header .gnb ul li a {
 }
 .brand {
     margin: 131px 0 0 0;
-    background: url(../images/brand.jpg)no-repeat center center / cover;
+    background: url(../images/brand.jpg) no-repeat center center / cover;
     height: 900px;
     color: #fff;
     padding: 349px 0 0 0;
@@ -104,11 +104,14 @@ header .gnb ul li a {
 footer {
    background-color: #2d2d2d;
    padding: 44px 0 44px 0;
-   color: rgba(255, 255, 255, 0.8);
+   color: #fff;
 }
 footer .f_nav ul {
     display: flex; /*li 좌우 배치*/
     gap: 0 42px;
+}
+footer .f_nav ul li.privacy a {
+    font-weight: 700;
 }
 footer .f_info {
     margin: 10px 0 10px 0;
@@ -116,5 +119,5 @@ footer .f_info {
     gap: 0 31px;
 }
 footer .copyright {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.6);
 }
