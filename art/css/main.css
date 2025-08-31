@@ -2,3 +2,35 @@
 @import url(default.css);
 @import url(font.css);
 @import url(common.css);
+
+header {
+    height: 100px;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .gnb ul {
+    display: flex;
+}
+header .gnb ul li a {
+    font-size: 22px;
+    line-height: 100px;
+    color: #1E2124;
+    letter-spacing: -2%;
+    display: block;
+    padding: 0 27px 0 27px;
+}
+.visual {
+    background: url(../images/visual_bg.jpg) no-repeat center center / cover;
+    height: 700px;
+    color: #fff;
+}
+.visual h1 {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: -2%;
+    padding:227px 0 11px 0;
+}
