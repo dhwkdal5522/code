@@ -43,6 +43,16 @@ a {
 ol , li, ul {
     list-style: none;
 }
+button {
+    border: none;
+    background: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    cursor: pointer; /*마우스 오버시 손바닥 모양으로 변경 */
+}
 *{
     margin: 0;
     padding: 0;
