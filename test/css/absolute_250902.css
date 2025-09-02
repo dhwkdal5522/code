@@ -103,7 +103,7 @@ header .gnb ul {
     top: 4px;
     background: url(../images/btn_arrow.svg)no-repeat center center;
     width: 14px;
-    height: 14px;
+    height: 14px; /*아이콘넓이*/
 }
 .btn_svg a:hover {
     border-color: #ED1C24;
@@ -115,11 +115,11 @@ header .gnb ul {
 }
 
 .btn_path a {
-    border:1px solid #666;
-    padding: 1px 16px 1px 17px;
+    border:1px solid #000;
+    padding: 1px 15px 1px 12px;
     display: inline-flex; /*span-svg가 좌우로 정렬*/
     border-radius: 30px;
-    gap:0 29px;
+    gap:0 10px;
     align-items: center;
 }
 .btn_path a:hover {
@@ -132,7 +132,7 @@ header .gnb ul {
 }
 .btn_path_ab a {
     border: 1px solid #666;
-    padding: 1px 34px 1px 36px;
+    padding: 1px 34px 1px 16px;
     border-radius: 25px;
     display: inline-block;
     position: relative/*svg 정렬의 기준*/;
@@ -156,7 +156,7 @@ body {
 }
 .btn_bg a { 
     border: 1px solid #666;
-    padding: 1px 34px 1px 36px;
+    padding: 1px 34px 1px 16px;
     border-radius: 25px;
     display: inline-block;
     position: relative /*after정렬의 기준*/
@@ -165,8 +165,8 @@ body {
 .btn_bg a::after {
     content: "";
     position: absolute;
-    right: 20px;
-    top: 14px;
+    right: 13px;
+    top: 11px;
     width: 13px;
     height: 7px;
     background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.8058 1.29298L5.93482 6.97913L0.248663 1.10815L1.29076 0.0988594L5.96762 4.92774L10.7965 0.250879L11.8058 1.29298Z' fill='%231C1B1F'/%3E%3C/svg%3E%0A");
@@ -177,16 +177,16 @@ body {
     color: #fff;
 }
 .btn_ico a {
-    border: 1px solid #666;
-    padding: 1px 34px 1px 36px;
+    border: 1px solid #000;
+    padding: 1px 34px 1px 16px;
     border-radius: 25px;
     display: inline-block;
     position: relative /*i정렬의 기준*/
 }
 .btn_ico a i {
     position: absolute;
-    right: 17px;
-    top: 12px;
+    right: 7px;
+    top: 3px;
 }
 .btn_ico a:hover {
     border-color: #ED1C24;
