@@ -78,11 +78,12 @@ header .gnb ul {
 .btn_ico  {
     margin: 50px 0 50px 0;
 }
+
 .btn_svg h2,
 .btn_path h2,
-.btn_path_ab,
+.btn_path_ab h2,
 .btn_bg h2,
-.btn_ico {
+.btn_ico h2 {
     font-size: 24px;
     font-weight: 700;
     color: #1d1d1d;
