@@ -1,0 +1,76 @@
+@import url(common.css);
+@import url(default.css);
+@import url(fonts.css);
+
+header {
+    position: absolute; /*wrap을 기준으로 정렬*/
+    left: 0;
+    top: 0;
+    z-index: 100;/*header는 맨위에 배치*/
+    width: 100%;
+    height: 110px;
+    color: #fff;
+}
+header .wrapper {
+    display: flex; /*logo gnb util 좌우배치*/
+    justify-content: space-between;
+    align-items: center;
+}
+header .gnb ul {
+    display: flex;/*li좌우배치*/
+}
+header .gnb ul a {
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 110px; /*header의 높이와 같은값*/
+    padding: 0 34px 0 34px;
+}
+.visual {
+    background: url(../images/visual_bg.jpg) no-repeat center center / cover;
+    border-radius: 0 0 200px 0;
+}
+.visual .wrapper {
+    height: 100vh;/*브라우저 높이에 맞춰서*/
+    min-height: 576px; /*최소높이*/
+    position: relative;/*life 정렬의 기준*/
+}
+.visual h2 {
+    padding: 24vh 0 0 362px; /*text-alin : center도 있음*/
+    
+}
+.visual .life {
+    width: 201px;
+    height: 201px;
+    border-radius: 50%; /*동그라미*/
+    background-color: #2246D7;
+    color: #fff;
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    padding: 72px 0 39px 0;
+    box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.1);
+    position: absolute;/*before정렬의 기준*/
+    right: 0;
+    bottom: -100px;
+}
+.visual .life::before {
+    content: ""; /*비포가 아이콘인가 봉가..?*/
+    position: absolute;/*life를 기준으로 정렬*/
+    left: 0;/*정렬의 기준인 life의 너비를 기준으로 100%*/
+    top: 32px;/*아이콘 위 여백*/
+    width: 100%;
+    height: 33px; /*아이콘 너비*/
+    background: url(../images/life_ico.svg)no-repeat center top; /*top하는 이유가 뭘까...? 하 ㅜㅜ*/
+}
+/*life 오버 스타일*/
+.visual .life:hover {
+    background-color: #2A67F4;
+}
+.visual .life strong {
+    font-weight: 700;
+}
+
+footer {
+    margin: 1000px 0 0 0;
+}
