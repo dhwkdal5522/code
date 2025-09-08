@@ -37,3 +37,15 @@ header .gnb ul li a {
 .biz {
     margin: 147px 0 0 0 ;
 }
+.biz .art,
+.biz .sch {
+    margin: 157px 0 0 0;
+}
+.biz .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.biz .txt strong {
+    font-weight: 700;
+    color: #B90C0C;
+}
