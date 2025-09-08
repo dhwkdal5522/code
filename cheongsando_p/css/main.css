@@ -1,0 +1,18 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+
+header{
+    height: 110px;
+}
+header .wrapper {
+    display: flex;
+}
+.visual {
+    background: url(../images/visual_bg.jpg) no-repeat center center / cover;
+    border-radius: 0 0 200px 0;
+}
+.visual .wrapper {
+    height: 100vh;
+    min-height: 576px; /*어디서 나온 수치인지 찾아보기*/
+}
