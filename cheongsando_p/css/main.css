@@ -4,6 +4,11 @@
 
 header{
     height: 110px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #fff;
 }
 header .wrapper {
     display: flex;
@@ -14,5 +19,5 @@ header .wrapper {
 }
 .visual .wrapper {
     height: 100vh;
-    min-height: 576px; /*어디서 나온 수치인지 찾아보기*/
+    min-height: 576px;
 }
