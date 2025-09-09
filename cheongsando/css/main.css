@@ -415,7 +415,203 @@ header .util .flow::before {
     font-size: 24px;
     line-height: 1.3;
     padding: 29px 0 0 27px;
+    position: relative;
 }
+.community .inner .service ul li a::after {
+    content: "";
+    position: absolute;/*a를기준으로 정렬*/
+    right: 14px; /*뭔지 확인 하기 250909_11시쯤*/
+    bottom: 20px;
+    width: 52px;
+    height: 52px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.community .inner .service ul li.icon1 a::after{
+    background-image: url(../images/community_service1.svg);
+}
+.community .inner .service ul li.icon2 a::after{
+    background-image: url(../images/community_service2.svg);
+}
+.community .inner .service ul li.icon3 a::after{
+    background-image: url(../images/community_service3.svg);
+}
+.community .inner .service ul li.icon4 a::after{
+    background-image: url(../images/community_service4.svg);
+}
+.community .inner .service ul li a:hover {
+    background-color: #2A67F4;
+}
+
 footer {
-    margin: 1000px 0 0 0;
+    padding: 82px 0 101px 0;
+    color:rgba(17, 17, 17, 0.8);
+}
+footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+footer .left_area .f_nav ul {
+    display: flex;
+    gap: 0 37px;
+}
+footer .left_area .f_nav ul li {
+    position: relative; /*after정렬의 기준*/
+}
+footer .left_area .f_nav ul li::after{
+    content: "";
+    position: absolute;/*li를 기준으로정렬*/
+    right: -20px;
+    top: 7px;
+    width: 1px;
+    height: 12px;
+    background-color: rgba(17, 17, 17, 0.2);
+}
+/*마지막 li의 after를 숨김처리*/
+footer .left_area .f_nav ul li:last-child::after {
+    display: none;
+}
+footer .left_area .f_nav ul li.privacy a {
+    /*글자 스타일 바꾸는 경우 왠만하면 a에*/
+    font-weight: 700;
+}
+/*개인정보처리 방침 border로 하면 위치를 제대로 못 잡으므로 before after로 함
+상단 왼쪽은 비포 하단 오른쪽은 에프터*/
+
+footer .left_area .f_nav ul li a::after { 
+    content: "";
+    position: absolute;/*li를 기준으로 정렬*/
+    left: 0;
+    bottom: 2px;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(17, 17, 17, 0.2);
+    transition: 0.5s;
+    opacity: 0;
+}
+
+footer .left_area .f_nav ul li a:hover::after {
+    opacity: 1;
+
+}
+footer .left_area .f_info {
+    margin: 26px 0 26px 0;
+    display: flex;/*flex를 적용하면 자기가 존재하는 만큼 블럭으로 범위가 지정됨*/
+    gap: 0 36px;
+}
+footer .left_area .copyright .no {
+    font-size: 15px;
+    color: rgba(17, 17, 17, 0.6);
+    /*after*/
+}
+footer .left_area .copyright .no span {
+    position: relative;
+    /*p태그는 블럭요소이므로 인라인태그인 span태그주고 기준을 span 태그로 줌*/
+}
+footer .left_area .copyright .no span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(17, 17, 17, 0.6);
+}
+footer .right_ara {
+    display: flex;/*fmaily-top좌우배치*/
+    align-items: flex-start;
+    gap: 0 13px;
+
+    /*family-site 만들기....250909_11시 이후 */
+}
+footer .right_ara .family_site { 
+    position: relative;/*family_detail정렬의 기준*/
+    color: #fff;
+}
+footer .right_ara .family_site button {
+    width: 143px;
+    height: 41px;
+    background-color: rgba(17, 17, 17, 0.8);
+    text-align: left;
+    padding: 0 0 0 14px;
+    position: relative;/*after정렬의 기준*/
+}
+footer .right_ara .family_site button::after {
+    content: "";
+    position: absolute;/*button을 기준으로 정렬*/
+    right: 9px; /*아이콘 오른쪽 위 여백*/
+    top: 12px;
+    width: 21px;
+    height: 18px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+/*아잌ㄴ*/
+footer .right_ara .family_site button.family_open::after {
+    background-image: url(../images/family_open.svg);
+}
+footer .right_ara .family_site button.family_close::after{
+    background-image: url(../images/family_close.svg);
+}
+footer .right_ara .family_site button.family_close {
+    display: none;/*맨처음에 안보이기 때문*/
+}
+footer .right_ara .family_site .family_detail {
+    position: absolute; /*family_site기준*/
+    left: 0;
+    bottom: 42px;
+    width: 100%;/*family_site너비를 기준으로 100%*/
+    background-color: rgba(17, 17, 17, 0.8);
+    padding: 23px 0 18px 14px;
+    display: none; /*맨처음에 안보임*/
+}
+footer .right_ara .family_site .family_detail ul li a {
+    display: block;
+    padding: 3px 0 3px 0 ;
+}
+footer .right_ara .family_site .family_detail ul li a:hover {
+    font-weight: 700;
+}
+footer .right_ara .family_site .family_detail ul li a span {
+    position: relative;
+}
+footer .right_ara .family_site .family_detail ul li a span::after {
+    content: "";
+    position: relative;
+    right: -17px;
+    top: 4px;
+    width: 13px;
+    height: 13px;
+    background: url(../images/family_blank.svg) no-repeat center center;
+}
+/*family)site가 열렸을 때 -- open 클래스가 추가 되었을 때*/
+footer .right_ara .family_site.open .family_detail {
+    display: block; /*none으로 숨겼다가 나타날때는 display의 아무값이나 줘도됨 단, block이 만만해서 block을 줌 */
+}
+footer .right_ara .family_site.open button.family_close {
+    display: block;
+}
+footer .right_ara .family_site.open  button.family_open {
+    display: none; /*열렸을때는 안보임*/
+}
+footer .right_ara .top {
+    width: 41px;
+    height: 41px;
+    background-color:rgba(17, 17, 17, 0.8);
+    font-size: 13px;
+    padding: 8px 0 0 0;
+    color: #fff;
+    position: relative;/*before*/
+}
+footer .right_ara .top::before {
+    content: "";
+    position: absolute;/*top을 기준으로 정렬*/
+    left: 0;
+    top: 7px;
+    width: 100%;
+    height: 6px;
+    background: url(../images/top.svg)no-repeat center center;
+}
+footer .right_ara .top:hover {
+    background-color: #2A67F4;
 }
