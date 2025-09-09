@@ -2,8 +2,8 @@
 @import url(fonts.css);
 @import url(common.css);
 
-header{
-    height: 110px;
+header {
+    height: 100px;
     width: 100%;
     position: absolute;
     left: 0;
@@ -12,12 +12,63 @@ header{
 }
 header .wrapper {
     display: flex;
+    justify-content: space-between;
+    align-items: center
+
+}
+header .gab ul {
+    display: flex;
+}
+header .gab ul a {
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 110px; /*헤더와 같은 높이값*/
+    padding: 0 34px 0 34px;
+}
+header .utill ul {
+    display: flex;
+    gap: 0 24px;
+}
+header .utill ul li {
+    padding: 44px 0 0 0; /*아이콘이 들어갈자리*/
+    font-size: 15px;
+    font-weight: 700;
+    position: relative;
+}
+header .utill .weather::before { /*아이콘이 들어갈 때 비포에프터와 함께 포지션 사용*/
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 7px;
+    height: 26px;
+    width: 100%; /*기준이 되는 글씨만큼 너비를 갖는다*/
+    background: url(../images/cloud.svg)no-repeat center center;
+
+}
+header .utill .sea::before { /*아이콘이 들어갈 때 비포에프터와 함께 포지션 사용*/
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 7px;
+    height: 26px;
+    width: 100%; /*기준이 되는 글씨만큼 너비를 갖는다*/
+    background: url(../images/tsunami.svg)no-repeat center center;
+
+}
+header .utill .flow::before { /*아이콘이 들어갈 때 비포에프터와 함께 포지션 사용*/
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 7px;
+    height: 26px;
+    width: 100%; /*기준이 되는 글씨만큼 너비를 갖는다*/
+    background: url(../images/water.svg)no-repeat center center;
+
 }
 .visual {
     background: url(../images/visual_bg.jpg) no-repeat center center / cover;
-    border-radius: 0 0 200px 0;
-}
-.visual .wrapper {
     height: 100vh;
-    min-height: 576px;
+    min-height: 450px;
+    border-radius: 0 0 200px 0;
 }
