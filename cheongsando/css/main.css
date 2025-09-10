@@ -584,11 +584,11 @@ footer .right_ara .family_site .family_detail ul li a span {
 }
 footer .right_ara .family_site .family_detail ul li a span::after {
     content: "";
-    position: relative;
+    position: absolute;
     right: -17px;
     top: 4px;
-    width: 13px;
-    height: 13px;
+    width: 9px;
+    height: 9px;
     background: url(../images/family_blank.svg) no-repeat center center;
 }
 /*family)site가 열렸을 때 -- open 클래스가 추가 되었을 때*/
