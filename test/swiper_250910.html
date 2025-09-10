@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--라이브러리는 상단에 호출-->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <!--내가 직접 수정하는 것-->
+    <link rel="stylesheet" href="css/swiper_250910.css">
+    <script src="js/swiper_250910.js"></script>
+    <title>swiper test</title>
+</head>
+<body>
+    <div class="visual">
+        <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
+            <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
+                <li class="swiper-slide popup1">
+                    <div class="wrapper"> <!--글자는 랩퍼안에 들어감-->
+                        <h2>신한금융그룹의 희망찬 이야기들1 </h2>
+                        <p>신한금융그룹의 희망찬 이야기들</p>
+                    </div>
+                </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
+                <li class="swiper-slide popup2">
+                    <div class="wrapper"> <!--글자는 랩퍼안에 들어감-->
+                        <h2>신한금융그룹의 희망찬 이야기들2 </h2>
+                        <p>신한금융그룹의 희망찬 이야기들</p>
+                    </div>
+                </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
+                <li class="swiper-slide popup3">
+                    <div class="wrapper"> <!--글자는 랩퍼안에 들어감-->
+                        <h2>신한금융그룹의 희망찬 이야기들3 </h2>
+                        <p>신한금융그룹의 희망찬 이야기들</p>
+                    </div>
+                </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
+            </ul>
+        </div> <!--swiper-->
+        <div class="ctrl_btn">
+            <button class="btn_prev"><span class="blind">이전버튼</span></button> 
+            <div class="pasing"></div>  <!-- 페이지 넘기는 숫자나 동그라미-->
+            <button class="btn_play"><span class="blind">재생</span></button>
+            <button class="btn_stop"><span class="blind">일시정지</span></button>
+            <button class="btn_next"><span class="blind">다음버튼</span></button>
+        </div><!--ctrl_btn-->
+    </div><!--visual-->
+    <div class="news">
+        <div class="wrapper">
+            <div class="tit">
+                <h2>PR Center</h2>
+                <p>PR Center</p>
+            </div>
+            <div class="list">
+                <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                    <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                        <li class="swiper-slide">
+                            <a href="#n">
+                                <div class="photo"><img src="https://www.samsungsdi.co.kr/upload/editor/images/000001/20250909082332265_7GLI3KVE.jpg" alt=""></div>
+                                <h3>성SDI, 고용량·안전성 확보 SBB 신제품 전격 공개…북미 최대 에너지산업 전시회 'RE+ 2025' 참가</h3>
+                                <p>삼성SDI가 9일(현지시간) 미국 라스베이거스에서 개막한 북미 최대 에너지산업 전시회 'RE+(Renewable Energy Plus) 2025'에 참가해 미국 에너지저장장치(ESS) 시장에 최적화된 차세대 배터리 제품 라인업을 전격 공개했다.</p>
+                            </a>
+                        </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
+                        <li class="swiper-slide">
+                            <a href="#n">
+                                <div class="photo"><img src="https://www.samsungsdi.co.kr/upload/editor/images/000001/20250901091829742_OUSQRA31.jpg" alt=""></div>
+                                <h3>"미국 ESS 시장 집중 공략"…삼성SDI, 'RE+ 2025'서 SBB 신제품 전격 공개</h3>
+                                <p>삼성SDI는 9월 9일(화)부터 11일(목)까지 사흘간 미국 라스베이거스의 '베네치안 엑스포 앤 시저스 포럼(THE Venetian EXPO & CAESARS FORUM)'에서 개최되는 'RE+(Renewable Energy Plus) 2025'에 참가한다고 31일 밝혔다.</p>
+                            </a>
+                        </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
+                        <li class="swiper-slide">
+                            <a href="#n">
+                                <div class="photo"><img src="https://www.samsungsdi.co.kr/upload/editor/images/000001/20250826154758922_ZT0OOZFZ.jpg" alt=""></div>
+                                <h3>삼성SDI 배터리 탑재 차량, 세계 최장 주행으로 기네스북 등재</h3>
+                                <p>삼성SDI 배터리가 탑재된 전기차가 세계 최장 주행 기록을 세우며 기네스북에 등재됐다.</p>
+                            </a>
+                        </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
+                        <li class="swiper-slide">
+                            <a href="#n">
+                                <div class="photo"><img src="https://www.samsungsdi.co.kr/upload/editor/1745795104865.jpg" alt=""></div>
+                                <h3>언제나 연결된 배터리 기술, Always ON… 삼성SDI, 인터배터리 유럽서 혁신 기술 소개</h3>
+                                <p>삼성SDI가 한 차원 진보한 에너지저장장치(ESS)용 배터리로 유럽을 비롯한 글로벌 시장 진출에 박차를 가한다.</p>
+                            </a>
+                        </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
+                        <li class="swiper-slide">
+                            <a href="#n">
+                                <div class="photo"><img src="https://www.samsungsdi.co.kr/upload/editor/1746576619486.jpg" alt=""></div>
+                                <h3>삼성SDI, 'AI 시대 정조준' 차세대 배터리 공개- 인터배터리 유럽 2025 참가 -</h3>
+                                <p>삼성SDI가 인공지능(AI) 시대에 각광받고 있는 차세대 배터리 제품을 대거 선보인다.</p>
+                            </a>
+                        </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
+                    </ul>
+                </div>
+            </div><!--list-->
+            <div class="btn_wrap">
+                <button class="btn_prev"><span>이전버튼</span></button>
+                <button class="btn_next"><span>다음버튼</span></button>
+                <a href="#n" class="more"><span>더보기</span></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
