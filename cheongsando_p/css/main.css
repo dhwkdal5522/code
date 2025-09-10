@@ -72,3 +72,10 @@ header .utill .flow::before { /*아이콘이 들어갈 때 비포에프터와 �
     min-height: 450px;
     border-radius: 0 0 200px 0;
 }
+
+.tour {
+    margin: 103px 0 0 0;
+    padding: 141px 0 97px 0;
+    background-color: #F7F7F7;
+}
+.tour
