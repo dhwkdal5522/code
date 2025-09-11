@@ -200,7 +200,8 @@ header .util .flow::before {
     0% {height: 0px;}
 }
 
-/* @keyframes more {
+/*  애니메이션 움직이는것
+    @keyframes more {
     0% {transform: translateY(0);}
     50% {transform: translateY(5px);}
     100%{transform: translateY(0);}
@@ -378,7 +379,7 @@ header .util .flow::before {
 }
 .community .inner .notice ul li a h4 {
     width: calc(100% - 99px);
-    /*제목은 날짜가 들어갈 공간 빼고 전체 a를 기준으로 100%*
+    /*제목은 날짜가 들어갈 공간(99px 빼고 전체 a를 기준으로 100%*
     1줄제한*/
     white-space: nowrap;
     overflow: hidden; /*글자를 잘라냄*/
