@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-3.7.1.min.js"></script><!--라이브러리 먼저 추가-->
+    <script src="js/main.js"></script>
+    <title>청산도</title>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="wrapper">
+                <h1 class="logo"><img src="images/logo.svg" alt="완도군 청산도"></h1>
+                <nav class="gnb">
+                    <ul>
+                        <li><a href="#n">청산도 소개</a></li>
+                        <li><a href="#n">관광안내</a></li>
+                        <li><a href="#n">추천여행</a></li>
+                        <li><a href="#n">커뮤니티</a></li>
+                    </ul>
+                </nav>
+                <div class="util">
+                    <a href="#n" class="weather">25.7℃</a>
+                    <a href="#n" class="sea">바다예보</a>
+                    <a href="#n" class="flow">물때표</a>
+                </div>
+            </div>
+        </header>
+        <main class="container">
+            <section class="visual">
+                <div class="wrapper">
+                    <h2><img src="images/visual_txt.jpg" alt="청산도는 쉼이다"></h2>
+                    <a href="#n" class="life">청산도<br>
+                        <strong>한달살이</strong></a>
+                </div>
+
+            </section><!--visual-->
+            <section class="culture">
+                <div class="wrapper">
+                    <div class="tit">
+                        <h2>청산도의 삶과 이야기</h2>
+                        <p>자연과 함께 살아온 섬 사람들의 느린 삶이 이어지는 곳, 청산도. 논 하나, 인사 한마디에도 따뜻한 정과 오랜 지혜가 담겨 있습니다.</p>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/culture1.jpg" alt="도락리정월굿의 장면"></div>
+                                    <h3>도락리 정월굿</h3>
+                                    <p>도락리 정월굿은 마을의 안녕과 풍어를 기원하며, 17년 만에 부활한 전통을 이어가는 중요한 행사입니다.</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/culture2.jpg" alt="청산도 꽃상여"></div>
+                                    <h3>청산도 꽃 상여</h3>
+                                    <p>청산도의 꽃 상여 장례문화는 전통적으로 3일장으로 치러지며, 상여꾼들이 상여를 메고 고인의 마지막 길을 함께합니다.</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/culture3.jpg" alt="도락리 갯벌"></div>
+                                    <h3>도락리 갯영 공표</h3>
+                                    <p>도락리마을은 45년 만에 갯영을 공표하며 전통적인 해초 채취 풍습을 되살렸습니다.</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="more"><a href="#n">MORE</a></div>
+                </div>
+            </section>
+            <section class="tour"> <!--9/8오후영상 17:17-->
+                <div class="wrapper">
+                    <div class="tit">
+                        <h2>여덟 개의 경치로 만나는 자연의 숨결</h2>
+                        <p>청산팔경은 청산도의 숨겨진 아름다움을 여덟 개의 경치로 엮어낸 역사적 유산입니다.</p>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <!--열려있는 li에 on 클래스를 추가해줌 (단 1개의 li에만 on클래스 추가)-->
+                            <li class="bg1 on"> <!--배경처리하기위함-->
+                                <a href="#n">
+                                    <h3>1경 항도귀범</h3>
+                                    <p>목섬에서 한가히 돌아오는 돛단배의 아름다움</p>
+                                </a>
+                            </li>
+                            <li class="bg2">
+                                <a href="#n">
+                                    <h3>2경 대성야우</h3>
+                                    <p>밤에 내리는 비가 대선산 높은 산봉우리를 적신 경치</p>
+                                </a>
+                            </li>
+                            <li class="bg3">
+                                <a href="#n">
+                                    <h3>3경 고성귀운</h3>
+                                    <p>옛 성터의 한적한 산마루 구름도 돌아간다.</p>
+                                </a>
+                            </li>
+                            <li class="bg4">
+                                <a href="#n">
+                                    <h3>4경 오산낙조</h3>
+                                    <p>멀리 두섬(모도) 상정 붉게 물든 낙조 바다길을 열도다.</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="more"><a href="#n">MORE</a></div>
+                </div>
+            </section><!--tour-->
+            <section class="community">
+                <div class="wrapper">
+                    <div class="tit">
+                        <h2>슬로우시티<br>
+                            청산도</h2>
+                        <p>느리게 걷고 깊게 파고들 수록<br>
+                            아름다운 섬</p>
+                    </div><!--tit-->
+                    <div class="inner"> <!--inner로 묶는 이유가 뭐지..? wapper로 한번에 안돼..?-->
+                        <div class="notice">
+                            <h3>공지사항</h3>
+                            <ul>
+                                <li>
+                                    <a href="#n">
+                                        <h4>청산도 한달살이(여성전용)</h4>
+                                        <span>25-09-03</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#n">
+                                        <h4>봉숭아 손톱 물들이기</h4>
+                                        <span>25-08-31</span>
+                                    </a>
+                                    
+                                </li>
+                                <li>
+                                    <a href="#n">
+                                        <h4>전국 생방송된 청산도 사진한장山八景 (청산팔경) 최초공개</h4>
+                                        <span>25-08-31</span>
+                                    </a>
+                                    
+                                </li>
+                                <li>
+                                    <a href="#n">
+                                        <h4> 청산도 7대 불가사의 진풍경山八景 (청산팔경) 최초공개</h4>
+                                        <span>25-08-14</span>
+                                    </a>
+                                    
+                                </li>
+                                <li>
+                                    <a href="#n">
+                                        <h4>산 미래의 아름다움 靑山八景 (청산팔경) 최초공개 山八景 (청산팔경) 최초공개</h4>
+                                        <span>25-07-21</span>
+                                    </a>
+                                   
+                                </li>
+                            </ul>
+                            <!--마우스를 오버할 때 이미지가 변경되어야 하는 경우 이미지는 background처리 해야함.
+                            대체 텍스트는 써줘야함, 쓴 글자는 css로 display none 처리 -->
+                            <a href="#n" class="more"><span>더보기</span></a>
+                        </div><!--notice-->
+                        <div class="service">
+                            <ul>
+                                <li class="icon1"><a href="#n">교통</a></li>
+                                <li class="icon2"><a href="#n">음식</a></li>
+                                <li class="icon3"><a href="#n">숙박</a></li>
+                                <li class="icon4"><a href="#n">슬로우길</a></li>
+                            </ul>
+                        </div><!--service-->
+                    </div><!--inner-->
+                </div><!--wrapper-->
+            </section><!--community-->
+        </main>
+        <footer>
+            <div class="wrapper">
+                <div class="left_area">
+                    <div class="f_nav">
+                        <ul>
+                            <li class="privacy"><a href="#n">개인정보처리방침</a></li>
+                            <li><a href="#n">이메일무단수집거부</a></li>
+                            <li><a href="#n">저작권안내</a></li>
+                        </ul>
+                    </div><!--f_nav-->
+                    <div class="f_info">
+                        <address>전남 완도군 청산면 도청리 1143번지</address>
+                        <span>문의전화 061-552-0809</span>
+                    </div><!--f_info-->
+                    <div class="copyright">
+                        <p>ⓒ cheongsando.net All rights reserved.ⓒ cheongsando.net All rights reserved.ⓒ cheongsando.net All rights reserved.</p>
+                        <p class="no"><span>※ www.cheongsando.net의 내용 및 이미지 무단링크, 무단전재, 재배포를 금지합니다.</span></p>
+                    </div><!--copytight-->
+                </div><!--left_area-->
+                <div class="right_ara">
+                    <!--family_site open 클래스를 주면 열린 상태,지우면 닫힘 상태-->
+                        <div class="family_site"> 
+                           <button class="family_open">관련사이트</button><!--여는버튼-->
+                            <div class="family_detail">
+                                <ul>
+                                    <li><a href="https://www.jeonnam.go.kr/01kr/" target="_blank" title="새창열림"><span>전라남도청</span></a></li>
+                                    <li><a href="https://www.wando.go.kr/intro/intro.htm" target="_blank" title="새창열림"><span>완도군청</span></a></li>
+                                </ul> <!--span쓴 이유 ? 아..갑자기알겠다..? 글씨에만 스타일 줘야 하니까 -->
+                            </div>
+                            <button class="family_close">관련사이트</button><!--닫는버튼-->
+                        </div>
+                        <button class="top">TOP</button>
+                        <!--<a href="#header" class="top">TOP</a>-->
+                        <!--딴대로 이동안하고 스크롤만 되는 것 : 기동을 작동시키는 것 버튼-->
+                </div><!--right_area-->
+            </div><!--wrapper-->
+        </footer>
+    </div><!--wrap-->
+    
+</body>
+</html>

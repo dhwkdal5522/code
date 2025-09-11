@@ -65,6 +65,10 @@
 .news {
     margin: 100px 0 100px 0;
 }
+
+.news .wrapper {
+    position: relative;
+}
 .news .tit h2 {
     font-size: 40px;
     font-weight: 700;
@@ -97,4 +101,54 @@
     font-weight: 700;
     color: #555;
     margin: 24px 0 16px 0;
+    /*2줄제한*/
+    height: 3em; /*행간*줄수 = (단위는em) 1.5*2=3em*/
+    overflow: hidden; /*넘치는거 자름*/
+
+    /*여러줄로 제한 할 때 맨위에...을 추가하는 코드 (호환성이 떨어짐)*/
+    display: -webkit-box; /*호환성이 떨어져서 일부 웹에서만 가능*/
+    -webkit-line-clamp: 2; /*2줄*/
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+.news .list .swiper-slide a p { 
+    /*세줄제한*/
+    height: 4.5em;
+    overflow: hidden;
+    display: -webkit-box; /*호환성이 떨어져서 일부 웹에서만 가능*/
+    -webkit-line-clamp: 3; /*2줄*/
+    -webkit-box-orient: vertical;
+
+    word-break: break-all; /*단어를 나눠서 강제 줄 바꿈 keep-all 반대*/
+}
+
+.news .btn_wrap {
+    position: absolute; /*wrapper기준정렬*/
+    right: 0;
+    top: 0;
+    display: flex;
+    gap: 0 14px;
+}
+.news .btn_wrap button,
+.news .btn_wrap a {
+    width: 34px;
+    height: 34px;
+    border: 1px solid #555;
+    border-radius: 50%;
+    background-color: #fff;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.news .btn_wrap button {
+    background-image: url(../images/news_arrow.svg);
+
+}
+.news .btn_wrap button.btn_next {
+    transform: rotate(180deg);
+}
+.news .btn_wrap button.swiper-button-disabled {
+    opacity: 0.5;
+}
+.news .btn_wrap a {
+    background-image: url(../images/news_more.svg);
 }

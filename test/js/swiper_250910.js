@@ -63,8 +63,8 @@ $(document).ready(function(){ //라이브러리 파일 연결 확인
         //     disableOnInteraction: true,
         // },
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.news .btn_wrap button.btn_next',
+            prevEl: '.news .btn_wrap button.btn_prev',
         },
        
 });
