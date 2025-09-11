@@ -12,7 +12,6 @@ body {
     width: 1260px;
     margin: 0 auto; /*가운데 정렬*/
 }
-#wrap {
-    min-width: 1460px; /*1260+100+100=1460*/
-    position: relative; /*header정렬의 기준*/
+@media screen and (max-width:640px){
+    
 }

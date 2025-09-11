@@ -19,7 +19,7 @@
 /* body 태그 기본서체 정의 ( 본문 스타일)  */
 body {
     font-family: 'Pretendard';
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
     color: #555; /* 여섯 글자 같으면 3개만 써도 됨. */
@@ -71,3 +71,13 @@ button {
     margin: -1px;
     overflow: hidden;
 }
+@media screen and (max-width:768px){
+   /*브라우저 사이즈 768px 부터 그 이하의 사이즈에서만 적용 */
+    body {
+        font-size: 16px;
+    } 
+    .wrapper {
+        width: auto; /*너비는 늘어나고 여백이 있을 뿐*/
+        margin: 0 16px; /*위아래 여백 0 좌우여백 16px*/
+    }
+}/*@media - 모바일버전*/
