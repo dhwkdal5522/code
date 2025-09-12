@@ -134,6 +134,18 @@ header .inner .shop::before {
 .product .more a:hover::after {
     background-image: url(../images/arrow_hover.svg);
 }
+.product .more a:hover,
+.product .more a:hover::after {
+    animation-name: more;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes more {
+    0% {transform: translateX(0);}
+    50% {transform: translateX(2px);}
+    100%{transform: translateX(0);}
+}
 
 .delivery {
     margin: 139px 0 110px 0;
