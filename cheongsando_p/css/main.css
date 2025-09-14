@@ -78,6 +78,52 @@ header .utill .flow::before { /*아이콘이 들어갈 때 비포에프터와 �
     padding: 141px 0 97px 0;
     background-color: #F7F7F7;
 }
+.tour .tit h2 {
+    margin: 0 0 19px 0 ;
+    font-size: 40px;
+    font-weight: 700;
+}
+.tour .list {
+    margin: 49px 0 0 0;
+}
+.tour .list ul {
+    display: flex;
+    justify-content: flex-end
+}
+.tour .list ul li {
+    width: 15.15%;
+}
+.tour .list ul li a {
+    padding: 0 0 71px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 494px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: #fff;
+}
+.tour .list ul li.bg1 a {
+    background-image: url(../images/tour1.jpg);
+}
+.tour .list ul li.bg2 a {
+    background-image: url(../images/tour2.jpg);
+}
+.tour .list ul li.bg3 a {
+    background-image: url(../images/tour3.jpg);
+}
+.tour .list ul li.bg4 a {
+    background-image: url(../images/tour4.jpg); /*9/8 오후 1:05:02 */
+}
+.tour .list ul li a h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+.tour .list ul li a p {
+    display: none;
+}
 .tour .more { 
     text-align: center;
 }

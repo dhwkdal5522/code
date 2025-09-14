@@ -262,11 +262,11 @@ header .util .flow::before {
 .tour .list ul {
     display: flex;
     justify-content: space-between;
-    gap: 0 24px;
+    gap: 0 24px; /*왜? 펼쳐지기 전으로 하는건가?*/
 }
 .tour .list ul li {
-   /* width: 15.07%;*/
-    /*li 한개의 너비 649px , ul의 너비가 1260px 그럼 li는 ul의 몇 %? = 51.50*/
+   /* width: 15.15%;*/
+    /*li 한개의 너비 191px , ul의 너비가 1260px 그럼 li는 ul의 몇 %? = 15.15*/
     transition: 0.5s;
     overflow: hidden;
     flex: 1 1 0%; /*골고루 똑같이*/

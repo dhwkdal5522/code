@@ -72,10 +72,10 @@ header .inner .shop::before {
     top: 76px;
 }
 
-.product .txt strong {
+.product .tit h2 {
     color: #00AC47;
 }
-.product .txt h2 {
+.product .tit p {
     font-size: 45px;
     font-weight: 800;
     color: #1d1d1d;
@@ -115,15 +115,13 @@ header .inner .shop::before {
 }
 .product .more a {
     display: inline-block;
+    padding: 0 14px 0 0;
     position: relative;
-}
-.product .more a:hover {
-    font-weight: 800;
 }
 .product .more a::after {
     content: "";
     position: absolute;
-    right: -14px;
+    right: 0px;
     top: 6px;
     width: 8px;
     height: 13px;
@@ -131,11 +129,7 @@ header .inner .shop::before {
     background-repeat: no-repeat;
     background-position: center center;
 }
-.product .more a:hover::after {
-    background-image: url(../images/arrow_hover.svg);
-}
-.product .more a:hover,
-.product .more a:hover::after {
+.product .more a:hover {
     animation-name: more;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -155,7 +149,7 @@ header .inner .shop::before {
     text-align: center;
     padding: 183px 0 0 0;
 }
-.delivery h2 {
+.delivery .tit p {
     font-size: 45px;
     font-weight: 800;
     margin: 7px 0 28px 0;
