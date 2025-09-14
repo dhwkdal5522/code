@@ -78,4 +78,32 @@ header .utill .flow::before { /*아이콘이 들어갈 때 비포에프터와 �
     padding: 141px 0 97px 0;
     background-color: #F7F7F7;
 }
-.tour
+.tour .more { 
+    text-align: center;
+}
+.tour .more a {
+    display: inline-block;
+    position: relative;
+    padding: 0 19px 0 0 ;
+    font-weight: 700;
+}
+.tour .more a::after { /*플러스 아이콘*/
+   content: "";
+   position: absolute;
+   right: 0;
+   top: 0;
+   width: 12px;
+   height: 100%;
+   background: url(../images/more.svg) no-repeat center center;
+} 
+.tour .more a:hover::after {
+    animation-name: more;
+    animation-duration: 1s;
+    animation-iteration-count: infinite; /*interation 반복*/  
+    animation-timing-function: linear; /*linear 일정한 속도 */
+}
+
+@keyframes more {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(-360deg);}
+}
