@@ -6,7 +6,7 @@
     position: relative; /* btn_wrap 정렬의 기준 */
 }
 .visual .swiper-slide {
-    height: 100vh; /*브라우저와 높이가 동일하게*/
+    height: 100dvh; /*브라우저와 높이가 동일하게 , 100vh는 주소창 때문에 화면 이미지 아래가 깔림.  > 대안 dvh*/
     background-position: center top; /*center top이면 위에는 고정이되서 브라우저를 줄여도 잘리지 않는다*/
     background-repeat: no-repeat;
     background-size: cover;
