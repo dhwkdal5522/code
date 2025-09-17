@@ -13,6 +13,17 @@ body {
     width: 1260px;
     margin: 0 auto; /*가운데 정렬*/
 }
-@media screen and (max-width:640px){
-    
+#wrap {
+    min-width: 1320px; /*1260 + 30 + 30 = 1320 */
+    position: relative; /*header정렬의 기준*/
+}
+/*html 문서 구조상 글자를 써줘야 하는데 
+그 글자를 안보이게 하고 싶을 때 blind class를 주면 사라짐*/
+.blind {
+    position: absolute; /*after top이 없어서 위치가 어딘가 날라감*/
+    clip: rect(0 0 0 0);/*그림을 그리는건데 0size?*/
+    width: 1px;
+    height: 1px; /*사이즈를 만들고 마진으로 사라지게 만들고 잘라냄*/
+    margin: -1px;
+    overflow: hidden;
 }
