@@ -2,3 +2,101 @@
 @import url(default.css);
 @import url(fonts.css);
 
+.visual {
+    position: relative; /* btn_wrap 정렬의 기준 */
+}
+.visual .swiper-slide {
+    height: 100vh; /*브라우저와 높이가 동일하게*/
+    background-position: center top; /*center top이면 위에는 고정이되서 브라우저를 줄여도 잘리지 않는다*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.visual .swiper-slide.popup1 {
+    background-image: url(../images/visual_bg1.jpg);
+}
+.visual .swiper-slide.popup2 {
+    background-image: url(../images/visual_bg2.jpg);
+}
+.visual .swiper-slide.popup3 {
+    background-image: url(../images/visual_bg3.jpg);
+}
+
+.visual .swiper-slide h3 {
+    font-size: 60px;
+    margin: 0 0 7px 0;
+}
+.visual .btn_wrap {
+    position: absolute;
+    left: calc(50% - 630px);/*1260의 절반 */
+    top: calc(50% + 120px);
+    z-index: 1;
+    display: flex;
+    gap: 0 6px;
+}
+.visual .btn_wrap button {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    /*아이콘에 사이즈를 주면 .. 리사이즈가..? 까묵*/
+    
+}
+.visual .btn_wrap button.btn_prev {
+    background-image: url(../images/visual_prev.svg);
+}
+.visual .btn_wrap button.btn_play {
+    background-image: url(../images/visual_play.svg);
+}
+.visual .btn_wrap button.btn_stop {
+    background-image: url(../images/visual_stop.svg);
+}
+.visual .btn_wrap button.btn_next {
+    background-image: url(../images/visual_prev.svg);
+    transform: rotate(180deg);
+}   
+@media screen and (max-width:768px){
+    .visual .swiper-slide h3 {
+        font-size: 28px;
+    }
+    .visual .swiper-slide h3 br {
+        display: none;
+    }
+    .visual .btn_wrap {
+        left: 50%; /*정렬의 기준인 visual 너비의 50%*/
+        transform: translateX(-50%); /*나 자신 btn_wrap너비의 절반을 왼쪽으로 이동하겠다는 뜻*/
+        top: auto;/*pc버전에서 top을 줬다가 모바일에서 bottom으로 교체하는 경우
+        top을 auto로 해지하고 bottom을 줘야 적용된다.*/
+        bottom: 20px;
+    }
+    .visual .btn_wrap button {
+        border: 1px solid #fff;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        /*아이콘에 사이즈를 주면 .. 리사이즈가..? 까묵*/
+        
+    }
+    .visual .btn_wrap button.btn_prev {
+        background-image: url(../images/visual_prev.svg);
+    }
+    .visual .btn_wrap button.btn_play {
+        background-image: url(../images/visual_play.svg);
+    }
+    .visual .btn_wrap button.btn_stop {
+        background-image: url(../images/visual_stop.svg);
+    }
+    .visual .btn_wrap button.btn_next {
+        background-image: url(../images/visual_prev.svg);
+        transform: rotate(180deg);
+    }   
+}/*@media */
+footer {
+    margin: 500px 0 0 0;
+}
