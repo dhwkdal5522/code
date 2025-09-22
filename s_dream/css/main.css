@@ -14,6 +14,7 @@ header {
     color: #fff;
     padding: 0 30px 0 30px; /*옆 여백*/
     align-items: center;
+    transition: 0.3s;
 }
 header .util {
     display: flex; /*mypage-lang*/
@@ -27,9 +28,11 @@ header .util .lang .lang_open {
 }
 header .util .mypage {
     background-image: url(../images/util_mypage.svg);
+    transition: 0.3s;
 }
 header .util .lang .lang_open {
     background-image: url(../images/util_lan.svg);
+    transition: 0.3s;
 }
 header .logo a {
     display: block; /*class blind를 html에 넣어주면 글씨가 사라짐*/
@@ -51,6 +54,23 @@ header .gnb .gnb_wrap ul li a {
     font-size: 24px;
     padding: 0 20px 0 20px;
 }
+/*header에 fixed 클래스가 추가되었을때*/
+header.fixed {
+    position: fixed; /*fixed는 무조건 body랑만 정렬*/
+    background-color: #fff;
+    color: #555555;
+    border-bottom: 1px solid #e6e6e6;
+}
+header.fixed .logo a {
+    background-image: url(../images/logo_b.svg);
+}
+header.fixed .util .mypage {
+   background-image: url(../images/util_mypage_g.svg);
+}
+header.fixed .util .lang .lang_open {
+    background-image: url(../images/util_lan_gray.svg);
+}
+
 @media screen and (max-width:768px){
     header {
         height: 56px;
@@ -66,6 +86,11 @@ header .gnb .gnb_wrap ul li a {
         width: 56px;
         height: 56px;
         background: url(../images/gnb_open.svg)no-repeat center center;
+        
+    }
+    header.fixed .gnb .gnb_open {
+        background: url(../images/gnb_open_g.svg)no-repeat center center;
+        
     }
     header .gnb .gnb_wrap {
         display: none; /*모바일에서 숨김*/
