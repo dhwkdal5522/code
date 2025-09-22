@@ -465,7 +465,7 @@ header.fixed .util .lang .lang_open {
     width: 0;
     height: 1px;
     background-color: #555;
-    transform: 0.1s;
+    transition: 0.1s;
 }
 .notice .more a:hover::before {
     content: "";
@@ -475,7 +475,7 @@ header.fixed .util .lang .lang_open {
     width: calc(100% - 35px);
     height: 1px;
     background-color: #555;
-    transform: 0.1s;
+    transition: 0.1s;
 }
 .notice .more a::after {
     content: "";
@@ -598,7 +598,7 @@ header.fixed .util .lang .lang_open {
     position: relative;
     left: calc(50% - 630px); */
     margin: 46px auto 0 auto;
-    width: 1260;
+    width: 1260px;
 }
 .webzine .list .swiper {
     overflow: visible;
@@ -709,7 +709,7 @@ header.fixed .util .lang .lang_open {
     width: 0;
     height: 1px;
     background-color: #fff;
-    transform: 0.1s;
+    transition: 0.1s;
 }
 .webzine .more a:hover::before {
     content: "";
@@ -719,7 +719,7 @@ header.fixed .util .lang .lang_open {
     width: calc(100% - 35px);
     height: 1px;
     background-color: #fff;
-    transform: 0.1s;
+    transition: 0.1s;
 }
 .webzine .more a::after {
     content: "";
