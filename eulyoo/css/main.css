@@ -1,0 +1,644 @@
+@import url(common.css);
+@import url(default.css);
+@import url(fonts.css);
+
+section h2,
+section h3 {
+    font-family: "Eulyoo1945";
+    font-weight: 700;
+    line-height: 1.3;
+}
+section .tit h2 {
+    font-size: 40px;
+}
+section .tit p {
+    margin: 10px 0 0 0;
+}
+@media screen and (max-width:768px){
+    section .tit h2 {
+        font-size: 28px;
+    }
+    section .tit p {
+        display: none;
+    }
+}
+.visual {
+    position: relative;/*ctrl_btn의 정렬의 기준*/
+}
+.visual .swiper-slide {
+    height: 100dvh; /*브라우저 높이에 딱 맞춰서*/
+    min-height: 463px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    align-items: flex-end;
+}
+.visual .swiper-slide.pop_up1 {
+    background-image: url(../images/visual_bg1.jpg);
+}
+.visual .swiper-slide.pop_up2 {
+    background-image: url(../images/visual_bg2.jpg);
+}
+.visual .swiper-slide.pop_up3 {
+    background-image: url(../images/visual_bg3.jpg);
+}
+.visual .swiper-slide h3 {
+    font-size: 60px;
+    margin: 0 0 20px 0;
+    transition-delay: 0.5s;
+    transition: 1s;
+    transform: translateY(30px);
+    opacity: 0;
+}
+.visual .swiper-slide p {
+    margin: 0 0 160px 0;
+    transition-delay: 1s;
+    transition: 1s;
+    transform: translateY(30px);
+    opacity: 0;
+}
+.visual .swiper-slide.swiper-slide-active h3 {
+    transform: translateY(0);
+    opacity: 1;
+}
+.visual .swiper-slide.swiper-slide-active p {
+    transform: translateY(0);
+    opacity: 1;
+}
+.visual .ctrl_btn {
+    position: absolute;/*비주얼기준*/
+    bottom: 93px; 
+    left: calc(50% - 630px); /*1260의 절반수치*/
+    width: 1260px;
+    /*절반 50%만큼의 곳에 가고 내 너비의 절반만큼 다시 가서 완벽히 50%에 위치*/
+    z-index: 1;
+    display: flex; 
+    justify-content: space-between;
+    align-items: flex-end;
+    
+}
+.visual .ctrl_btn .btn_left,
+.visual .ctrl_btn .btn_right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.visual .ctrl_btn .paging {
+    bottom: auto;
+    left: auto;
+    width: auto;
+    display: flex;
+    gap: 0 8px;
+}
+.visual .ctrl_btn .paging .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: transparent;
+    opacity: 1 ;
+    margin:0;
+}
+.visual .ctrl_btn .paging .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #fff;
+}
+.visual .ctrl_btn .btn_stop {
+    width: 16px;
+    height: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_25_783' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='14' height='14'%3E%3Crect width='14' height='14' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_25_783)'%3E%3Cpath d='M9.33333 11.0837C9.0125 11.0837 8.73785 10.9694 8.50938 10.741C8.2809 10.5125 8.16667 10.2378 8.16667 9.91699V4.08366C8.16667 3.76283 8.2809 3.48817 8.50938 3.2597C8.73785 3.03123 9.0125 2.91699 9.33333 2.91699C9.65417 2.91699 9.92882 3.03123 10.1573 3.2597C10.3858 3.48817 10.5 3.76283 10.5 4.08366V9.91699C10.5 10.2378 10.3858 10.5125 10.1573 10.741C9.92882 10.9694 9.65417 11.0837 9.33333 11.0837ZM4.66667 11.0837C4.34583 11.0837 4.07118 10.9694 3.84271 10.741C3.61424 10.5125 3.5 10.2378 3.5 9.91699V4.08366C3.5 3.76283 3.61424 3.48817 3.84271 3.2597C4.07118 3.03123 4.34583 2.91699 4.66667 2.91699C4.9875 2.91699 5.26215 3.03123 5.49063 3.2597C5.7191 3.48817 5.83333 3.76283 5.83333 4.08366V9.91699C5.83333 10.2378 5.7191 10.5125 5.49063 10.741C5.26215 10.9694 4.9875 11.0837 4.66667 11.0837Z' fill='%23D9D9D9'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.visual .ctrl_btn .btn_play {
+    display: none;
+    width: 16px;
+    height: 16px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_25_786' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='14' height='14'%3E%3Crect width='14' height='14' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_25_786)'%3E%3Cpath d='M4.66663 10.0193V3.98177C4.66663 3.81649 4.72496 3.67795 4.84163 3.56615C4.95829 3.45434 5.0944 3.39844 5.24996 3.39844C5.29857 3.39844 5.34961 3.40573 5.40308 3.42031C5.45656 3.4349 5.5076 3.45677 5.55621 3.48594L10.3104 6.50469C10.3979 6.56302 10.4635 6.63594 10.5073 6.72344C10.551 6.81094 10.5729 6.9033 10.5729 7.00052C10.5729 7.09774 10.551 7.1901 10.5073 7.2776C10.4635 7.3651 10.3979 7.43802 10.3104 7.49635L5.55621 10.5151C5.5076 10.5443 5.45656 10.5661 5.40308 10.5807C5.34961 10.5953 5.29857 10.6026 5.24996 10.6026C5.0944 10.6026 4.95829 10.5467 4.84163 10.4349C4.72496 10.3231 4.66663 10.1845 4.66663 10.0193Z' fill='%23D9D9D9'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.visual .ctrl_btn .btn_next,
+.visual .ctrl_btn .btn_prev {
+    width: 32px;
+    height: 32px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_25_774' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' transform='matrix(-1 0 0 1 24 0)' fill='white'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_25_774)'%3E%3Cpath d='M7.825 13H20V11H7.825L13.425 5.4L12 4L4 12L12 20L13.425 18.6L7.825 13Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.visual .ctrl_btn .btn_next {
+    transform: rotate(180deg);
+}
+@media screen and (max-width:768px){
+    .visual .swiper-slide {
+        height: 468px; 
+    }
+    .visual .swiper-slide h3 {
+        font-size: 28px;
+        margin: 0 0 151px 0;
+        transform: translateY(20px);
+        /* transition-delay: 0.5s;
+        transition: 1s;
+        
+        opacity: 0; */
+    }
+    .visual .swiper-slide p {
+        display: none;
+    }
+    .visual .ctrl_btn {
+        bottom: 62px; 
+        left: 50%;
+        transform: translateX(-50%); 
+        width: auto;
+    }
+    .visual .ctrl_btn .btn_right {
+       display: none;
+    }
+    
+    .visual .ctrl_btn .paging {
+        bottom: auto;
+        left: auto;
+        width: auto;
+        display: flex;
+        gap: 0 8px;
+    }
+    .visual .ctrl_btn .paging .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        display: inline-block;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        background: transparent;
+        opacity: 1 ;
+        margin:0;
+    }
+    .visual .ctrl_btn .paging .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        background-color: #fff;
+    }
+    .visual .ctrl_btn .btn_stop {
+        width: 16px;
+        height: 16px;
+        background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_25_783' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='14' height='14'%3E%3Crect width='14' height='14' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_25_783)'%3E%3Cpath d='M9.33333 11.0837C9.0125 11.0837 8.73785 10.9694 8.50938 10.741C8.2809 10.5125 8.16667 10.2378 8.16667 9.91699V4.08366C8.16667 3.76283 8.2809 3.48817 8.50938 3.2597C8.73785 3.03123 9.0125 2.91699 9.33333 2.91699C9.65417 2.91699 9.92882 3.03123 10.1573 3.2597C10.3858 3.48817 10.5 3.76283 10.5 4.08366V9.91699C10.5 10.2378 10.3858 10.5125 10.1573 10.741C9.92882 10.9694 9.65417 11.0837 9.33333 11.0837ZM4.66667 11.0837C4.34583 11.0837 4.07118 10.9694 3.84271 10.741C3.61424 10.5125 3.5 10.2378 3.5 9.91699V4.08366C3.5 3.76283 3.61424 3.48817 3.84271 3.2597C4.07118 3.03123 4.34583 2.91699 4.66667 2.91699C4.9875 2.91699 5.26215 3.03123 5.49063 3.2597C5.7191 3.48817 5.83333 3.76283 5.83333 4.08366V9.91699C5.83333 10.2378 5.7191 10.5125 5.49063 10.741C5.26215 10.9694 4.9875 11.0837 4.66667 11.0837Z' fill='%23D9D9D9'/%3E%3C/g%3E%3C/svg%3E%0A");
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    .visual .ctrl_btn .btn_play {
+        display: none;
+        width: 16px;
+        height: 16px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_25_786' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='14' height='14'%3E%3Crect width='14' height='14' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_25_786)'%3E%3Cpath d='M4.66663 10.0193V3.98177C4.66663 3.81649 4.72496 3.67795 4.84163 3.56615C4.95829 3.45434 5.0944 3.39844 5.24996 3.39844C5.29857 3.39844 5.34961 3.40573 5.40308 3.42031C5.45656 3.4349 5.5076 3.45677 5.55621 3.48594L10.3104 6.50469C10.3979 6.56302 10.4635 6.63594 10.5073 6.72344C10.551 6.81094 10.5729 6.9033 10.5729 7.00052C10.5729 7.09774 10.551 7.1901 10.5073 7.2776C10.4635 7.3651 10.3979 7.43802 10.3104 7.49635L5.55621 10.5151C5.5076 10.5443 5.45656 10.5661 5.40308 10.5807C5.34961 10.5953 5.29857 10.6026 5.24996 10.6026C5.0944 10.6026 4.95829 10.5467 4.84163 10.4349C4.72496 10.3231 4.66663 10.1845 4.66663 10.0193Z' fill='%23D9D9D9'/%3E%3C/g%3E%3C/svg%3E%0A");
+    }
+    .visual .ctrl_btn .btn_next,
+    .visual .ctrl_btn .btn_prev {
+        width: 32px;
+        height: 32px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_25_774' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' transform='matrix(-1 0 0 1 24 0)' fill='white'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_25_774)'%3E%3Cpath d='M7.825 13H20V11H7.825L13.425 5.4L12 4L4 12L12 20L13.425 18.6L7.825 13Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    }
+    .visual .ctrl_btn .btn_next {
+        transform: rotate(180deg);
+    }
+} /**/
+header {
+    position: absolute; /*wrap을 기준으로 정렬*/
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100px;
+    color: #fff;
+    padding: 0 30px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+header .logo a {
+    display: block;
+    width: 202px;
+    height: 32px;
+    background: url(../images/logo.svg)no-repeat center center / contain;
+    /*contain은 로고가 안잘리게 . cover는 잘림*/
+}
+header .gnb .gnb_open,
+header .gnb .gnb_close {
+    display: none;/*모바일에서 보일거임*/
+}
+header .gnb .gnb_wrap ul {
+    display: flex;/*li좌우배치*/
+}
+header .gnb .gnb_wrap ul li a {
+    display: block;
+    font-family: "Eulyoo1945";
+    font-weight: 700;
+    font-size: 22px;
+    
+    padding: 0 40px 0 40px;
+}
+header .utill {
+    display: flex;
+}
+header .utill .mypage,
+header .utill .search .search_open {
+    width: 42px;
+    height: 42px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+header .utill .mypage {
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_25_765' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='30' height='30'%3E%3Crect width='30' height='30' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_25_765)'%3E%3Cpath d='M15 15C13.625 15 12.4479 14.5104 11.4688 13.5312C10.4896 12.5521 10 11.375 10 10C10 8.625 10.4896 7.44792 11.4688 6.46875C12.4479 5.48958 13.625 5 15 5C16.375 5 17.5521 5.48958 18.5312 6.46875C19.5104 7.44792 20 8.625 20 10C20 11.375 19.5104 12.5521 18.5312 13.5312C17.5521 14.5104 16.375 15 15 15ZM5 22.5V21.5C5 20.7917 5.18229 20.1406 5.54688 19.5469C5.91146 18.9531 6.39583 18.5 7 18.1875C8.29167 17.5417 9.60417 17.0573 10.9375 16.7344C12.2708 16.4115 13.625 16.25 15 16.25C16.375 16.25 17.7292 16.4115 19.0625 16.7344C20.3958 17.0573 21.7083 17.5417 23 18.1875C23.6042 18.5 24.0885 18.9531 24.4531 19.5469C24.8177 20.1406 25 20.7917 25 21.5V22.5C25 23.1875 24.7552 23.776 24.2656 24.2656C23.776 24.7552 23.1875 25 22.5 25H7.5C6.8125 25 6.22396 24.7552 5.73438 24.2656C5.24479 23.776 5 23.1875 5 22.5ZM7.5 22.5H22.5V21.5C22.5 21.2708 22.4427 21.0625 22.3281 20.875C22.2135 20.6875 22.0625 20.5417 21.875 20.4375C20.75 19.875 19.6146 19.4531 18.4688 19.1719C17.3229 18.8906 16.1667 18.75 15 18.75C13.8333 18.75 12.6771 18.8906 11.5312 19.1719C10.3854 19.4531 9.25 19.875 8.125 20.4375C7.9375 20.5417 7.78646 20.6875 7.67188 20.875C7.55729 21.0625 7.5 21.2708 7.5 21.5V22.5ZM15 12.5C15.6875 12.5 16.276 12.2552 16.7656 11.7656C17.2552 11.276 17.5 10.6875 17.5 10C17.5 9.3125 17.2552 8.72396 16.7656 8.23438C16.276 7.74479 15.6875 7.5 15 7.5C14.3125 7.5 13.724 7.74479 13.2344 8.23438C12.7448 8.72396 12.5 9.3125 12.5 10C12.5 10.6875 12.7448 11.276 13.2344 11.7656C13.724 12.2552 14.3125 12.5 15 12.5Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    transition: 0.5s;
+}
+header .utill .search .search_open {
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_25_768' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='30' height='30'%3E%3Crect width='30' height='30' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_25_768)'%3E%3Cpath d='M11.875 20C9.60417 20 7.68229 19.2135 6.10938 17.6406C4.53646 16.0677 3.75 14.1458 3.75 11.875C3.75 9.60417 4.53646 7.68229 6.10938 6.10938C7.68229 4.53646 9.60417 3.75 11.875 3.75C14.1458 3.75 16.0677 4.53646 17.6406 6.10938C19.2135 7.68229 20 9.60417 20 11.875C20 12.7917 19.8542 13.6562 19.5625 14.4688C19.2708 15.2812 18.875 16 18.375 16.625L25.375 23.625C25.6042 23.8542 25.7188 24.1458 25.7188 24.5C25.7188 24.8542 25.6042 25.1458 25.375 25.375C25.1458 25.6042 24.8542 25.7188 24.5 25.7188C24.1458 25.7188 23.8542 25.6042 23.625 25.375L16.625 18.375C16 18.875 15.2812 19.2708 14.4688 19.5625C13.6562 19.8542 12.7917 20 11.875 20ZM11.875 17.5C13.4375 17.5 14.7656 16.9531 15.8594 15.8594C16.9531 14.7656 17.5 13.4375 17.5 11.875C17.5 10.3125 16.9531 8.98438 15.8594 7.89062C14.7656 6.79688 13.4375 6.25 11.875 6.25C10.3125 6.25 8.98438 6.79688 7.89062 7.89062C6.79688 8.98438 6.25 10.3125 6.25 11.875C6.25 13.4375 6.79688 14.7656 7.89062 15.8594C8.98438 16.9531 10.3125 17.5 11.875 17.5Z' fill='white'/%3E%3C/g%3E%3C/svg%3E ");
+    transition: 0.5s;
+}
+
+header.fixed {
+    position: fixed;
+    height: 80px;
+    color: #615A52;
+    border-bottom: 1px solid #EBE9F0;
+    background-color: #fff;
+}
+header.fixed .logo a {
+    background-image: url(../images/logo_b.svg);
+    /*contain은 로고가 안잘리게 . cover는 잘림*/
+}
+/*header에 fixed 클래스가 추가되었을 때*/
+header.fixed .utill .mypage {
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_20_920' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='30' height='30'%3E%3Crect width='30' height='30' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_20_920)'%3E%3Cpath d='M15 15C13.625 15 12.4479 14.5104 11.4688 13.5312C10.4896 12.5521 10 11.375 10 10C10 8.625 10.4896 7.44792 11.4688 6.46875C12.4479 5.48958 13.625 5 15 5C16.375 5 17.5521 5.48958 18.5312 6.46875C19.5104 7.44792 20 8.625 20 10C20 11.375 19.5104 12.5521 18.5312 13.5312C17.5521 14.5104 16.375 15 15 15ZM5 22.5V21.5C5 20.7917 5.18229 20.1406 5.54688 19.5469C5.91146 18.9531 6.39583 18.5 7 18.1875C8.29167 17.5417 9.60417 17.0573 10.9375 16.7344C12.2708 16.4115 13.625 16.25 15 16.25C16.375 16.25 17.7292 16.4115 19.0625 16.7344C20.3958 17.0573 21.7083 17.5417 23 18.1875C23.6042 18.5 24.0885 18.9531 24.4531 19.5469C24.8177 20.1406 25 20.7917 25 21.5V22.5C25 23.1875 24.7552 23.776 24.2656 24.2656C23.776 24.7552 23.1875 25 22.5 25H7.5C6.8125 25 6.22396 24.7552 5.73438 24.2656C5.24479 23.776 5 23.1875 5 22.5ZM7.5 22.5H22.5V21.5C22.5 21.2708 22.4427 21.0625 22.3281 20.875C22.2135 20.6875 22.0625 20.5417 21.875 20.4375C20.75 19.875 19.6146 19.4531 18.4688 19.1719C17.3229 18.8906 16.1667 18.75 15 18.75C13.8333 18.75 12.6771 18.8906 11.5312 19.1719C10.3854 19.4531 9.25 19.875 8.125 20.4375C7.9375 20.5417 7.78646 20.6875 7.67188 20.875C7.55729 21.0625 7.5 21.2708 7.5 21.5V22.5ZM15 12.5C15.6875 12.5 16.276 12.2552 16.7656 11.7656C17.2552 11.276 17.5 10.6875 17.5 10C17.5 9.3125 17.2552 8.72396 16.7656 8.23438C16.276 7.74479 15.6875 7.5 15 7.5C14.3125 7.5 13.724 7.74479 13.2344 8.23438C12.7448 8.72396 12.5 9.3125 12.5 10C12.5 10.6875 12.7448 11.276 13.2344 11.7656C13.724 12.2552 14.3125 12.5 15 12.5Z' fill='%23615A52'/%3E%3C/g%3E%3C/svg%3E ");
+}
+header.fixed .utill .search .search_open {
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_20_923' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='30' height='30'%3E%3Crect width='30' height='30' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_20_923)'%3E%3Cpath d='M12.125 20.25C9.85417 20.25 7.93229 19.4635 6.35938 17.8906C4.78646 16.3177 4 14.3958 4 12.125C4 9.85417 4.78646 7.93229 6.35938 6.35938C7.93229 4.78646 9.85417 4 12.125 4C14.3958 4 16.3177 4.78646 17.8906 6.35938C19.4635 7.93229 20.25 9.85417 20.25 12.125C20.25 13.0417 20.1042 13.9062 19.8125 14.7188C19.5208 15.5312 19.125 16.25 18.625 16.875L25.625 23.875C25.8542 24.1042 25.9688 24.3958 25.9688 24.75C25.9688 25.1042 25.8542 25.3958 25.625 25.625C25.3958 25.8542 25.1042 25.9688 24.75 25.9688C24.3958 25.9688 24.1042 25.8542 23.875 25.625L16.875 18.625C16.25 19.125 15.5312 19.5208 14.7188 19.8125C13.9062 20.1042 13.0417 20.25 12.125 20.25ZM12.125 17.75C13.6875 17.75 15.0156 17.2031 16.1094 16.1094C17.2031 15.0156 17.75 13.6875 17.75 12.125C17.75 10.5625 17.2031 9.23438 16.1094 8.14062C15.0156 7.04688 13.6875 6.5 12.125 6.5C10.5625 6.5 9.23438 7.04688 8.14062 8.14062C7.04688 9.23438 6.5 10.5625 6.5 12.125C6.5 13.6875 7.04688 15.0156 8.14062 16.1094C9.23438 17.2031 10.5625 17.75 12.125 17.75Z' fill='%23615A52'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+@media screen and (max-width:768px){
+    header {
+        height: 56px;
+        padding: 0 0 0 16px; /*오른쪽 여백은 없음. 전체메뉴자리*/
+    }
+    header .logo a {
+        display: block;
+        width: 115px;
+        height: 18px;
+    }
+    header .gnb .gnb_open {
+        display: block;
+        width: 56px;
+        height: 56px;/*header의 높이 너비*/
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_25_2453' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_25_2453)'%3E%3Cpath d='M3 7V5H21V7H3ZM3 19V17H21V19H3ZM3 13V11H21V13H3Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+        background-position: center center;
+        background-repeat:no-repeat;
+    }
+    header.fixed .gnb .gnb_open {
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_25_1996' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect x='0.5' y='0.5' width='23' height='23' fill='%23D9D9D9' stroke='%23615A52'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_25_1996)'%3E%3Cpath d='M20.9873 17.0127V18.9873H3.0127V17.0127H20.9873ZM20.9873 11.0127V12.9873H3.0127V11.0127H20.9873ZM20.9873 5.0127V6.9873H3.0127V5.0127H20.9873Z' fill='%23615A52' stroke='%23615A52' stroke-width='0.025'/%3E%3C/g%3E%3C/svg%3E%0A");
+    }
+    header .gnb .gnb_wrap {
+        display: none;
+    }
+    header .utill {
+        display: none;
+    }
+    header .utill .mypage,
+    header .utill .search .search_open {
+        width: 42px;
+        height: 42px;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    header .utill .mypage {
+        background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_25_765' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='30' height='30'%3E%3Crect width='30' height='30' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_25_765)'%3E%3Cpath d='M15 15C13.625 15 12.4479 14.5104 11.4688 13.5312C10.4896 12.5521 10 11.375 10 10C10 8.625 10.4896 7.44792 11.4688 6.46875C12.4479 5.48958 13.625 5 15 5C16.375 5 17.5521 5.48958 18.5312 6.46875C19.5104 7.44792 20 8.625 20 10C20 11.375 19.5104 12.5521 18.5312 13.5312C17.5521 14.5104 16.375 15 15 15ZM5 22.5V21.5C5 20.7917 5.18229 20.1406 5.54688 19.5469C5.91146 18.9531 6.39583 18.5 7 18.1875C8.29167 17.5417 9.60417 17.0573 10.9375 16.7344C12.2708 16.4115 13.625 16.25 15 16.25C16.375 16.25 17.7292 16.4115 19.0625 16.7344C20.3958 17.0573 21.7083 17.5417 23 18.1875C23.6042 18.5 24.0885 18.9531 24.4531 19.5469C24.8177 20.1406 25 20.7917 25 21.5V22.5C25 23.1875 24.7552 23.776 24.2656 24.2656C23.776 24.7552 23.1875 25 22.5 25H7.5C6.8125 25 6.22396 24.7552 5.73438 24.2656C5.24479 23.776 5 23.1875 5 22.5ZM7.5 22.5H22.5V21.5C22.5 21.2708 22.4427 21.0625 22.3281 20.875C22.2135 20.6875 22.0625 20.5417 21.875 20.4375C20.75 19.875 19.6146 19.4531 18.4688 19.1719C17.3229 18.8906 16.1667 18.75 15 18.75C13.8333 18.75 12.6771 18.8906 11.5312 19.1719C10.3854 19.4531 9.25 19.875 8.125 20.4375C7.9375 20.5417 7.78646 20.6875 7.67188 20.875C7.55729 21.0625 7.5 21.2708 7.5 21.5V22.5ZM15 12.5C15.6875 12.5 16.276 12.2552 16.7656 11.7656C17.2552 11.276 17.5 10.6875 17.5 10C17.5 9.3125 17.2552 8.72396 16.7656 8.23438C16.276 7.74479 15.6875 7.5 15 7.5C14.3125 7.5 13.724 7.74479 13.2344 8.23438C12.7448 8.72396 12.5 9.3125 12.5 10C12.5 10.6875 12.7448 11.276 13.2344 11.7656C13.724 12.2552 14.3125 12.5 15 12.5Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+        transition: 0.5s;
+    }
+    header .utill .search .search_open {
+        background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_25_768' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='30' height='30'%3E%3Crect width='30' height='30' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_25_768)'%3E%3Cpath d='M11.875 20C9.60417 20 7.68229 19.2135 6.10938 17.6406C4.53646 16.0677 3.75 14.1458 3.75 11.875C3.75 9.60417 4.53646 7.68229 6.10938 6.10938C7.68229 4.53646 9.60417 3.75 11.875 3.75C14.1458 3.75 16.0677 4.53646 17.6406 6.10938C19.2135 7.68229 20 9.60417 20 11.875C20 12.7917 19.8542 13.6562 19.5625 14.4688C19.2708 15.2812 18.875 16 18.375 16.625L25.375 23.625C25.6042 23.8542 25.7188 24.1458 25.7188 24.5C25.7188 24.8542 25.6042 25.1458 25.375 25.375C25.1458 25.6042 24.8542 25.7188 24.5 25.7188C24.1458 25.7188 23.8542 25.6042 23.625 25.375L16.625 18.375C16 18.875 15.2812 19.2708 14.4688 19.5625C13.6562 19.8542 12.7917 20 11.875 20ZM11.875 17.5C13.4375 17.5 14.7656 16.9531 15.8594 15.8594C16.9531 14.7656 17.5 13.4375 17.5 11.875C17.5 10.3125 16.9531 8.98438 15.8594 7.89062C14.7656 6.79688 13.4375 6.25 11.875 6.25C10.3125 6.25 8.98438 6.79688 7.89062 7.89062C6.79688 8.98438 6.25 10.3125 6.25 11.875C6.25 13.4375 6.79688 14.7656 7.89062 15.8594C8.98438 16.9531 10.3125 17.5 11.875 17.5Z' fill='white'/%3E%3C/g%3E%3C/svg%3E ");
+        transition: 0.5s;
+    }
+    
+    header.fixed {
+        height: 56px;
+    }
+    
+}/**/
+
+.book {
+    margin: 142px 0 0 0;
+}
+.book .book_wrap {
+    width: calc(50% + 630px);
+    /*book넓이의 절반 50% + wrapper의 절반 630px*/
+    margin-left: calc((100% - 1260px) / 2);
+    display: flex;/*tit - list 좌우배치*/
+    justify-content: space-between;
+    position: relative;/*ctrl_btn, more정렬의*/
+}
+
+.book .book_wrap .list {
+    width: calc(100% - 360px);
+    margin: -10px 0 0 0;
+}
+.book .book_wrap .list .swiper {
+    padding: 10px 30px 0 10px;
+}
+.book .book_wrap .list .swiper-wrapper {
+    align-items: flex-end;
+}
+.book .book_wrap .list .swiper-slide {
+    width: 200px;
+}
+.book .book_wrap .list .swiper-slide a {
+    display: block;
+}
+.book .book_wrap .list .swiper-slide a .photo {
+    overflow: hidden;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .25);
+    /* font-size: 0;
+    line-height: 0; */
+    display: inline-block;
+    zoom: 1;
+    text-align: left;
+    vertical-align: top;
+}
+.book .book_wrap .list .swiper-slide a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: top;
+}
+.book .book_wrap .list .swiper-slide a .txt {
+    height: 100px;
+}
+.book .book_wrap .list .swiper-slide a .txt h3 {
+    margin: 22px 0 5px 0;
+    color: #1C0D08;
+    font-size: 22px;
+    /*최대두줄*/
+    line-height: 1.3;
+    max-height: 2.6em;/*행간*줄수=단위는em*/
+    overflow: hidden;
+}
+.book .book_wrap .list .swiper-slide a .txt p {
+    /*최대한줄*/
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.book .book_wrap .ctrl_btn {
+    position: absolute;
+    left: 0;
+    top: 375px;
+    display: flex;
+    gap: 0 10px;
+}
+.book .book_wrap .ctrl_btn button {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #555;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("data:image/svg+xml,%3Csvg width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_25_813' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='25' height='24'%3E%3Crect x='-0.5' y='0.5' width='23' height='23' transform='matrix(-1 0 0 1 23.0198 0)' fill='%23555555' stroke='%23555555'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_25_813)'%3E%3Cpath d='M4.03735 12L12.0208 19.9824L13.427 18.5986L7.83618 13.0088L7.8147 12.9873H20.0071V11.0127H7.8147L13.427 5.40039L12.0208 4.0166L4.03735 12Z' fill='%23555555' stroke='%23555555' stroke-width='0.025'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.book .book_wrap .ctrl_btn button.btn_next {
+    transform: rotate(180deg);
+}
+.book .book_wrap .ctrl_btn button.swiper-button-disabled { /*disable이 없음...*/
+    opacity: 0.5;
+    cursor: default;
+}
+.book .book_wrap .more {
+    position: absolute;
+    left: 0;
+    top: 150px;
+}
+.book .book_wrap .more a {
+    display: block;
+    position: relative;/*after정렬의 기준*/
+}
+
+.book .book_wrap .more a:hover::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border: 1px solid #555;
+    width: 100%;
+}
+@media screen and (max-width:768px){
+    .book {
+        margin: 53px 0 0 0;
+    }
+    .book .book_wrap {
+        width: 100%;
+        /*book넓이의 절반 50% + wrapper의 절반 630px*/
+        margin-left: 0;
+        display: block;/*tit - list 위아래배치 flex해지*/
+    }
+    .book .book_wrap .tit {
+        margin: 0 0 0 16px;
+    }
+    .book .book_wrap .list {
+        width: 100%;
+        margin: 16px 0 0 0;
+    }
+    .book .book_wrap .list .swiper {
+        padding: 10px 16px 0 16px;
+    }
+    .book .book_wrap .list .swiper-wrapper {
+        align-items: flex-end;
+    }
+    .book .book_wrap .list .swiper-slide {
+        width: 155px;
+    }
+    .book .book_wrap .list .swiper-slide a .txt {
+        height: 80px;
+    }
+    .book .book_wrap .list .swiper-slide a .txt h3 {
+        margin: 17px 0 4px 0;
+        font-size: 20px;
+    }
+    .book .book_wrap .ctrl_btn {
+        position: absolute;
+        left: 0;
+        top: 375px;
+        display: flex;
+        gap: 0 10px;
+    }
+    .book .book_wrap .ctrl_btn button {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .book .book_wrap .ctrl_btn button.swiper-button-disabled { /*disable이 없음...*/
+        opacity: 0.5;
+        cursor: default;
+    }
+    .book .book_wrap .more {
+        position: absolute;
+        left: auto;
+        right: 16px;
+        top: 0;
+    }
+    .book .book_wrap .more a {
+        display: block;
+        position: relative;/*after정렬의 기준*/
+    }
+    
+    .book .book_wrap .more a:hover::before {
+        display: none;
+    }
+}/**/
+.interview {
+    margin: 124px 0 0 0;
+    padding: 146px 0 184px 0;
+    background-color: #EBE9F0;
+    
+}
+.interview .wrapper {
+    position: relative;
+}
+.interview .tit {
+    text-align: center;
+
+}
+.interview .list {
+    margin: 124x 0 0 0;
+}
+.interview .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.interview .list ul li {
+    width: calc(33.33% - 16px);
+}
+.interview .list ul li:nth-child(2) a {
+    margin: 42px 0 0 0;
+} 
+.interview .list ul li a {
+    display: block;
+    position: relative;/*txt기준*/
+
+}
+.interview .list ul li a .photo {
+    overflow: hidden;
+    height: 400px;
+    border-radius: 50px 0 50px 0;
+    position: relative;
+
+}
+.interview .list ul li a .photo::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    z-index: 1;
+    background: linear-gradient(0deg, #000,rgba(0,0,0,0));
+}
+.interview .list ul li a:hover .photo::before {
+    opacity: 0;
+}
+.interview .list ul li:nth-child(2) a .photo {
+    border-radius: 0 50px 0 50px;
+}
+.interview .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(1);/*흑백*/
+    transition: 0.5s;
+}
+.interview .list ul li a:hover .photo img {
+    filter: grayscale(0);/*칼라*/
+} 
+.interview .list ul li a .txt {
+    position: absolute;/*a를기준으로*/
+    content: "";
+    left: 0;
+    bottom: -47px;
+    width: calc(100% - 60px);
+    padding: 54px 35px 64px 35px;
+    color: #fff;
+    border-radius: 50px 0 50px 0;
+    transition: 0.5s;
+    z-index: 10;
+    
+}
+.interview .list ul li a:hover .txt {
+    padding: 42px 35px 64px 35px;
+    background-color: #1C0D08;
+    bottom: -72px;
+
+}
+.interview .list ul li:nth-child(2) a .txt {
+    border-radius: 0 50px 0 50px;
+}
+.interview .list ul li a .txt::after {
+    content: "";
+    position: absolute;
+    right:26px;
+    top: -26px;
+    width: 57px;
+    height: 57px;
+    background-image: url("data:image/svg+xml,%3Csvg width='45' height='45' viewBox='0 0 45 45' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_20_891' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='45' height='45'%3E%3Crect width='45' height='45' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_20_891)'%3E%3Cpath d='M21.5625 37.5V23.4375H7.5V21.5625H21.5625V7.5H23.4375V21.5625H37.5V23.4375H23.4375V37.5H21.5625Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    transition: 0.5s;
+}
+.interview .list ul li a:hover .txt::after {
+    right:17px;
+    top: 17px;
+    width: 45px;
+    height: 45px;
+}
+.interview .list ul li a .txt h3 {
+    font-size: 32px;
+    margin: 0 0 12px 0;
+}
+.interview .list ul li a .txt p {
+    opacity: 0;
+    transition: 0.5s;
+}
+.interview .list ul li a:hover .txt p {
+    opacity: 1;
+}
+
+.interview .more {
+    position: absolute;/*wrapper기준정렬*/
+    left: 50%;
+    transform: translateX(-50%);
+    top: 255px;
+}
+.interview .more {
+    position: absolute;
+    left: 0;
+    top: 150px;
+}
+.interview .more a {
+    display: block;
+    position: relative;/*after정렬의 기준*/
+}
+.imterview .more a:hover::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border: 1px solid #555;
+    width: 100%;
+}
+
+    footer {
+    margin: 1000px 0 0 0;
+}

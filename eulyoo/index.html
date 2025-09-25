@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js"></script>
+    <title>을유문화사</title>
+</head>
+<body>
+    <div id="wrap">
+        <!-- 브라우저 스크롤을 내리면 header에 fixed 클래스 추가-->
+        <header>
+            <h1 class="logo"><a href="index.html"><span class="blind">을유문화사</span></a></h1>
+            <nav class="gnb">
+                <button class="gnb_open"><span class="blind">메뉴열기</span></button>
+                <div class="gnb_wrap">
+                    <ul>
+                        <li><a href="#n"><span>을유문화사</span></a></li>
+                        <li><a href="#n"><span>콘텐츠</span></a></li>
+                        <li><a href="#n"><span>을유소개</span></a></li>
+                        <li><a href="#n"><span>독자참여</span></a></li>
+                    </ul>
+                </div>
+                <button class="gnb_close"><span class="blind">메뉴닫기</span></button>
+            </nav>
+            <div class="utill">
+                <a href="#n" class="mypage"><span class="blind">마이페이지</span></a>
+                <div class="search">
+                    <button class="search_open"><span class="blind">검색열기</span></button>
+                </div>
+            </div>
+        </header>
+        <main class="container">
+            <section class="visual">
+                <h2 class="blind">팝업</h2>
+                <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
+                    <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
+                        <li class="swiper-slide pop_up1">
+                            <div class="wrapper">
+                                <h3>출판은 곧 건국, <br>
+                                    책으로 역사를 잇다.</h3>
+                                <p>광복의 감격 속에 태동한 을유문화사, 한국 출판의 뿌리를 이어갑니다.</p>
+                            </div>
+                        </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
+                        <li class="swiper-slide pop_up2">
+                            <div class="wrapper">
+                                <h3>우리말과 함께 <br>
+                                    걸어온 길</h3>
+                                <p>잃어버린 말과 정신을 되살리고, 한국 현대사와 궤를 같이한 출판의 역사.</p>
+                            </div>
+                        </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
+                        <li class="swiper-slide pop_up3">
+                            <div class="wrapper">
+                                <h3>법고창신, <br>
+                                    옛것을 딛고 새 길을 열다.</h3>
+                                <p>고전의 지혜를 오늘의 독자와 연결하며 시대를 밝히는 책을 만듭니다.</p>
+                            </div>
+                        </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
+                    </ul>
+                </div>
+                <div class="ctrl_btn">
+                    <div class="btn_left">
+                        <div class="paging"></div>  <!-- 컨트롤 요소는 swiper 안에 배치-->
+                        <button class="btn_stop"><span class="blind">정지버튼</span></button>
+                    <button class="btn_play"><span class="blind">재생버튼</span></button>
+                    </div>
+                    <div class="btn_right">
+                        <button class="btn_prev"><span class="blind">이전버튼</span></button>
+                        <button class="btn_next"><span class="blind">다음버튼</span></button>
+                    </div>
+                </div>
+            </section><!--visual-->
+            <section class="book">
+                <div class="book_wrap">
+                    <div class="tit">
+                        <h2>오늘의 책</h2>
+                        <p>책 읽는 즐거움, <br>
+                            을유문화사와 함께 하세요</p>
+                    </div>
+                    <div class="list">
+                        <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                            <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <div class="photo"><img src="images/book1.jpg   " alt=""></div>
+                                        <div class="txt">
+                                            <h3>불안에 관하여</h3>
+                                            <p>베레나 카스트 , 최호영</p>
+                                        </div>
+                                    </a>
+                                </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <div class="photo"><img src="images/book2.jpg" alt=""></div>
+                                        <div class="txt">
+                                            <h3>자살의 연구</h3>
+                                            <p>앨 앨버레즈 , 최승자,황은주</p>
+                                        </div>
+                                    </a>
+                                </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <div class="photo"><img src="images/book3.jpg" alt=""></div>
+                                        <div class="txt">
+                                            <h3>나를 돌보는 철학</h3>
+                                            <p>문성훈</p>
+                                        </div>
+                                    </a>
+                                </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <div class="photo"><img src="images/book4.jpg" alt=""></div>
+                                        <div class="txt">
+                                            <h3>각별한 실패</h3>
+                                            <p>클라로(Claro) , 이세진</p>
+                                        </div>
+                                    </a>
+                                </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <div class="photo"><img src="images/book5.png" alt=""></div>
+                                        <div class="txt">
+                                            <h3>크리스마스 북</h3>
+                                            <p>파이돈 편집부 , 허윤정</p>
+                                        </div>
+                                    </a>
+                                </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <div class="photo"><img src="images/book6.png" alt=""></div>
+                                        <div class="txt">
+                                            <h3>밤은 부드러워, 마셔</h3>
+                                            <p>한은형</p>
+                                        </div>
+                                    </a>
+                                </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <div class="photo"><img src="images/book7.png" alt=""></div>
+                                        <div class="txt">
+                                            <h3>아구아 비바</h3>
+                                            <p>클라리시 리스펙토르 , 민승남</p>
+                                        </div>
+                                    </a>
+                                </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <div class="photo"><img src="images/book8.png" alt=""></div>
+                                        <div class="txt">
+                                            <h3>을유세계문학전집_128 격정과 신비</h3>
+                                            <p>르네 샤르 , 심재중</p>
+                                        </div>
+                                    </a>
+                                </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
+                            </ul>
+                        </div>
+                    </div><!--list-->
+                    <div class="ctrl_btn">
+                        <button class="btn_prev"><span class="blind">이전팝업보기</span></button>
+                        <button class="btn_next"><span class="blind">다음팝업보기</span></button>
+                    </div> 
+                    <div class="more"><a href="#n"><span>더보기</span></a></div>
+                    
+                </div>
+            </section><!--book-->
+            <section class="interview">
+                <div class="wrapper">
+                    <div class="tit">
+                        <h2>월간 을터뷰</h2>
+                        <p>작가가 전하는 책 너머의 이야기, 지금 만나보세요.</p>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/interview01.jpg" alt=""></div>
+                                    <div class="txt">
+                                        <h3>역자 <br>
+                                            백선희</h3>
+                                        <p>파스칼 키냐르를 번역한 프랑스어 번역가</p>
+                                        
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/interview02.jpg" alt=""></div>
+                                    <div class="txt">
+                                        <h3>역자 <br>
+                                            송기정</h3>
+                                        <p>발자크의 &lt; 인간극 &gt;번역가 송기정</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/interview03.jpg" alt=""></div>
+                                    <div class="txt">
+                                        <h3>영화 감독 <br>
+                                            박찬욱</h3>
+                                        <p>&lt; 어떻게 헤어질 결심을 &gt; 사진집의 작가이자 영화 헤어질 결심의 영화감독 박찬</p>
+                                      
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="more"><a href="#n"><span>더보기</span></a></div>
+                </div>
+            </section><!--interview-->
+            <section class="story">
+                <div class="wrapper">
+                    <div class="tit">
+                        <h2>을유 시리즈</h2>
+                    </div>
+                </div>
+            </section><!--story-->
+        </main>
+        <footer></footer>
+    </div>
+
+</body>
+</html>
