@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap'); /*임포트는 맨위에 써줘야 에러가 안난다*/
+@font-face {
+    font-family: 'GMarketSans';
+    src: url('../fonts/GmarketSansMedium.woff') format('woff');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GMarketSans';
+    src: url('../fonts/GmarketSansBold.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+}
+

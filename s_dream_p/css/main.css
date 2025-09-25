@@ -133,7 +133,6 @@ header.fixed .util .lang .lang_open {
     z-index: 1;
     display: flex;
     gap: 0 6px;
-    background-color: red;
 }
 .visual .btn_wrap button {
     border: 1px solid #fff;
