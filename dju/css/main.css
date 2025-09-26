@@ -13,7 +13,7 @@ section h1 {
     color: #1D1D1D;
 }
 .notice {
-    margin: 171px;
+    margin: 171px 0 0 0;
 }
 .notice .wrapper {
     position: relative;
@@ -146,7 +146,6 @@ section h1 {
     background-color: rgba(255, 255, 255, 0.1);
     text-align: center;
     position: relative;
-    padding: 29px 0 0 27px;
     color: #fff;
 }
 .dju .service ul li a::after {
@@ -183,3 +182,51 @@ section h1 {
 .dju .service ul li.icon8 a::after{
     background-image: url("data:image/svg+xml,%3Csvg width='45' height='45' viewBox='0 0 45 45' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_2101_140' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='45' height='45'%3E%3Crect width='45' height='45' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_2101_140)'%3E%3Cpath d='M4.6875 38.4374V35.625H40.3124V38.4374H4.6875ZM6.5625 33.0287V21.5625H11.25V33.0287H6.5625ZM15.613 33.0287V12.1875H20.3004V33.0287H15.613ZM24.6815 33.0287V17.8125H29.3689V33.0287H24.6815ZM33.75 33.0287V6.5625H38.4374V33.0287H33.75Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
+@media screen and (max-width:768px){
+    .dju { 
+        margin: 96px 0 0 0;
+        height: 610px;
+        background: url(../images/dju_bg.jpg) no-repeat center center / cover;
+        padding: 154px 0 133px 0;
+    }
+    .dju .wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    .dju .tit strong {
+        color: #fff;
+    }
+    .dju .tit h1 {
+        color: #fff ;
+    }
+    .dju .service ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px 20px;
+    }
+    .dju .service li {
+        width: calc(25% - 20px);
+        /*100%한줄에 나오는 li갯수 2=100/2=50%
+        한 줄 여백의 합 60px / 한줄에 나오는 li갯수 3=20 */
+    }
+    
+    .dju .service ul li a {
+        display: block;
+        height: 150px;
+        background-color: rgba(255, 255, 255, 0.1);
+        text-align: center;
+        position: relative;
+        padding: 29px 0 0 27px;
+        color: #fff;
+    }
+    .dju .service ul li a::after {
+        content: "";
+        position: absolute;
+        right: 49px;
+        bottom:46px;
+        width: 45px;
+        height: 45px;
+        background-position: center center;
+        background-repeat: no-repeat;
+    } 
+}/**/
