@@ -135,9 +135,9 @@ section h1 {
     gap: 20px 20px;
 }
 .dju .service li {
-    width: calc(25% - 20px);
+    width: calc(50% - 20px);
     /*100%한줄에 나오는 li갯수 2=100/2=50%
-    한 줄 여백의 합 60px / 한줄에 나오는 li갯수 3=20 */
+    한 줄 여백의 합 32px / 한줄에 나오는 li갯수 2 = 16 */
 }
 
 .dju .service ul li a {
