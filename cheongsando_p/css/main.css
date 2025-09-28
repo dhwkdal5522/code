@@ -26,7 +26,7 @@
 .community .inner .notice {
     width: 583px;
     height: 424px;
-    padding: 46px 51px 63px 53px;
+    padding: 46px 51px 0 53px;
     background-color: rgba(0, 75, 120, .65);
     backdrop-filter: blur(5.3px);
     border-radius: 5px;
@@ -51,9 +51,21 @@
 }
 .community .inner ul li a {
     display: flex;
-    
 }
 .community .service ul {
     display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.community .service ul li {
+    width: calc(50% - 7.5px );
+}
+.community .service ul li a {
+    height: 164px;
+    display: block;
+    padding: 29px 0 0 27px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
 }
 
