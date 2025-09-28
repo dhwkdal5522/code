@@ -129,7 +129,7 @@ header.fixed .util .lang .lang_open {
 .visual .btn_wrap {
     position: absolute;
     left: calc(50% - 630px);/*1260의 절반 */
-    top: calc(50% + 120px);
+    top: calc(50% + 120px); /*~~~~~위치 어떻게 정했는지확인*/
     z-index: 1;
     display: flex;
     gap: 0 6px;

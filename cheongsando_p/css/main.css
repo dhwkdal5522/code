@@ -2,154 +2,58 @@
 @import url(fonts.css);
 @import url(common.css);
 
-header {
-    height: 100px;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
+.community {
+    margin: 97px 0 0 0;
+    padding: 158px 0 218px 0 ;
+    background: url(../images/community_bg.jpg)no-repeat center center / cover;
+    height: 800px;
     color: #fff;
 }
-header .wrapper {
+.community .wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: center
-
 }
-header .gab ul {
-    display: flex;
-}
-header .gab ul a {
-    display: block;
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 110px; /*헤더와 같은 높이값*/
-    padding: 0 34px 0 34px;
-}
-header .utill ul {
-    display: flex;
-    gap: 0 24px;
-}
-header .utill ul li {
-    padding: 44px 0 0 0; /*아이콘이 들어갈자리*/
-    font-size: 15px;
-    font-weight: 700;
-    position: relative;
-}
-header .utill .weather::before { /*아이콘이 들어갈 때 비포에프터와 함께 포지션 사용*/
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 7px;
-    height: 26px;
-    width: 100%; /*기준이 되는 글씨만큼 너비를 갖는다*/
-    background: url(../images/cloud.svg)no-repeat center center;
-
-}
-header .utill .sea::before { /*아이콘이 들어갈 때 비포에프터와 함께 포지션 사용*/
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 7px;
-    height: 26px;
-    width: 100%; /*기준이 되는 글씨만큼 너비를 갖는다*/
-    background: url(../images/tsunami.svg)no-repeat center center;
-
-}
-header .utill .flow::before { /*아이콘이 들어갈 때 비포에프터와 함께 포지션 사용*/
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 7px;
-    height: 26px;
-    width: 100%; /*기준이 되는 글씨만큼 너비를 갖는다*/
-    background: url(../images/water.svg)no-repeat center center;
-
-}
-.visual {
-    background: url(../images/visual_bg.jpg) no-repeat center center / cover;
-    height: 100vh;
-    min-height: 450px;
-    border-radius: 0 0 200px 0;
-}
-
-.tour {
-    margin: 103px 0 0 0;
-    padding: 141px 0 97px 0;
-    background-color: #F7F7F7;
-}
-.tour .tit h2 {
-    margin: 0 0 19px 0 ;
+.community .tit h1 {
+    margin: 41px 0 22px 0;
     font-size: 40px;
     font-weight: 700;
+    line-height: 1.3;
 }
-.tour .list {
-    margin: 49px 0 0 0;
-}
-.tour .list ul {
+.community .inner {
     display: flex;
-    justify-content: flex-end
+    gap: 14px;
 }
-.tour .list ul li {
-    width: 15.15%;
+.community .inner .notice {
+    width: 583px;
+    height: 424px;
+    padding: 46px 51px 63px 53px;
+    background-color: rgba(0, 75, 120, .65);
+    backdrop-filter: blur(5.3px);
+    border-radius: 5px;
 }
-.tour .list ul li a {
-    padding: 0 0 71px 32px;
+.community .inner .notice ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+    
+}
+.community .inner .notice ul li a {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    height: 494px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    color: #fff;
+    justify-content: space-between;
+    padding: 18px 0 18px 0;
 }
-.tour .list ul li.bg1 a {
-    background-image: url(../images/tour1.jpg);
-}
-.tour .list ul li.bg2 a {
-    background-image: url(../images/tour2.jpg);
-}
-.tour .list ul li.bg3 a {
-    background-image: url(../images/tour3.jpg);
-}
-.tour .list ul li.bg4 a {
-    background-image: url(../images/tour4.jpg); /*9/8 오후 1:05:02 */
-}
-.tour .list ul li a h3 {
+.community .inner .notice h1{
+    margin: 0 0 12px 0 ;
     font-size: 24px;
     font-weight: 700;
     line-height: 1.3;
 }
-.tour .list ul li a p {
-    display: none;
+.community .inner .notice span {
+    opacity: 80%;
 }
-.tour .more { 
-    text-align: center;
+.community .inner ul li a {
+    display: flex;
+    
 }
-.tour .more a {
-    display: inline-block;
-    position: relative;
-    padding: 0 19px 0 0 ;
-    font-weight: 700;
-}
-.tour .more a::after { /*플러스 아이콘*/
-   content: "";
-   position: absolute;
-   right: 0;
-   top: 0;
-   width: 12px;
-   height: 100%;
-   background: url(../images/more.svg) no-repeat center center;
-} 
-.tour .more a:hover::after {
-    animation-name: more;
-    animation-duration: 1s;
-    animation-iteration-count: infinite; /*interation 반복*/  
-    animation-timing-function: linear; /*linear 일정한 속도 */
+.community .service ul {
+    display: flex;
 }
 
-@keyframes more {
-    0% {transform: rotate(0deg);}
-    100% {transform: rotate(-360deg);}
-}
