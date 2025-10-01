@@ -834,15 +834,12 @@ header.fixed .utill .search .search_open {
 
 .story .ctrl_btn {
     position: absolute;
-    left: 219px;
+    left: 235px;
     top: 11px;
     display: flex;
     gap: 0 17px;
 }
 .story .ctrl_btn button {
-    position: absolute;
-    left: 0;
-    top: 0;
     width: 32px;
     height: 32px;
     border: 1px solid #555;
@@ -909,16 +906,14 @@ header.fixed .utill .search .search_open {
     }
     
     .story .ctrl_btn {
-        position: absolute;
-        left: 219px;
-        top: 0px;
+        position: relative;
+        left: 0px;
+        top: 17px;
         display: flex;
+        justify-content: center;
         gap: 0 17px;
     }
     .story .ctrl_btn button {
-        position: absolute;
-        left: 0;
-        top: 0;
         width: 32px;
         height: 32px;
         border: 1px solid #555;

@@ -105,8 +105,8 @@ $(document).ready(function(){
         //     disableOnInteraction: true,
         // },
         navigation: {
-            nextEl: '.story .button_next',
-            prevEl: '.story .button_prev',
+            nextEl: '.story .btn_next',
+            prevEl: '.story .btn_prev',
         },
         pagination: {  /* 몇개의 팝업이 있는지 보여주는 동그라미 */
             el: '.swiper-pagination', /* 해당 요소의 class명 */
