@@ -28,7 +28,7 @@ header {
     display: flex; /*logo - gnb - util 좌우배치*/
     justify-content: space-between;
     align-items: center;
-    background-color: #A622A3;
+    
 
 }
 header .logo a {
