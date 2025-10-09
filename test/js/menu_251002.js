@@ -36,4 +36,8 @@ $('header .util .lang .lang_open').on('focusin',function(){
      */
     $('header').removeClass('menu_over')
 })
+/** 모바일에서 1차메뉴를 클릭하면 2차 메뉴 
+ */
+
+
 })/* */
