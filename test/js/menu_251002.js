@@ -76,7 +76,7 @@ $('header .util .lang .lang_open').on('focusin',function(){
             if($(this).parent().hasClass('open') == true){  
                 //메뉴가 열려있는 상태 -- 나 자신을 닫고 끝냄
                 $(this).parent().removeClass('open')
-                $(this).next().slideup()
+                $(this).next().slideUp()
             }else{
                 //메뉴가 닫혀있는 상태 - 다른 메뉴를 다 닫고 나만 열음
                 $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('open')
