@@ -30,12 +30,15 @@ $(document).ready(function(){
  * 제한 조건 - li 중에서 오버한 한개만 over클래스 들어감
  *          - 메뉴에서 벋어나면 over가 사라짐 */
 $('header .gnb .gnb_wrap ul.depth1 > li').on('mouseenter focusin',function(){
-    $(this).addClass('over')
-    console.log('오버했음')
+    if(device_status == 'pc'){
+        $(this).addClass('over')
+        // console.log('오버했음')
+    }
+    
 })
 $('header .gnb .gnb_wrap ul.depth1 > li').on('mouseleave focusout',function(){
     $(this).removeClass('over')
-    console.log('아웃했음')
+   // console.log('아웃했음')
 })
 /**
  * 누구한테 header .gnb
@@ -47,7 +50,9 @@ $('header .gnb .gnb_wrap ul.depth1 > li').on('mouseleave focusout',function(){
  * 키보드 탭으로도 메뉴가 보여야 함 focusin
  */
 $('header .gnb').on('mouseenter focusin',function(){
-    $('header').addClass('menu_over')
+     if(device_status == 'pc'){
+        $('header').addClass('menu_over')
+     }
     
 })
 $('header').on('mouseleave',function(){
@@ -59,17 +64,39 @@ $('header .util .lang .lang_open').on('focusin',function(){
      */
     $('header').removeClass('menu_over')
 })
-/** 모바일에서 1차메뉴를 클릭하면 2차 메뉴 
+/** 모바일에서 1차메뉴를 클릭하면 2차 메뉴 열기
+ * 메뉴가 열려있으면 나 자신을 닫고
+ * 메뉴가 닫혀있으면 열려있는 다른 메뉴는 닫고 나는 열기
+ * ---- 클릭 했을 때 메뉴가 열렸는지 닫혔는지 판단 1차메뉴 li에 open
  */
-	$('header .gnb .gnb_wrap ul.depth1 > li > a').on('click', function(e){
-		//e.preventDefault();		/* a 태그의 href를 작동 시키지 않음 */
-	});
-    
     $('header .gnb .gnb_wrap ul.depth1 > li > a').on('click', function(e){
         if(device_status == 'mobile'){
             e.preventDefault();		/* a 태그의 href를 작동 시키지 않음 */
-            console.log('모바일이다!!!')
+            
+            if($(this).parent().hasClass('open') == true){  
+                //메뉴가 열려있는 상태 -- 나 자신을 닫고 끝냄
+                $(this).parent().removeClass('open')
+                $(this).next().slideup()
+            }else{
+                //메뉴가 닫혀있는 상태 - 다른 메뉴를 다 닫고 나만 열음
+                $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('open')
+                $('header .gnb .gnb_wrap ul.depth1 > li > ul.depth2').slideUp()
+                $(this).parent().addClass('open')
+                $(this).next().slideDown()
+            }
+            // console.log('모바일이다!!!')
         }
     }); 
+    /** header .gnb .gnb_open 클릭 header에, menu_open 추가
+     * header .gnb .gnb_close 클릭 hedader에 menu_open삭제
+     */
+    $('header .gnb .gnb_open').on('click', function(){
+        $('header').addClass('menu_open')
+        $('header .gnb .gnb_bg').show()
+    })
+    $('header .gnb .gnb_close').on('click', function(){
+        $('header').removeClass('menu_open')
+        $('header .gnb .gnb_bg').hide()
+    })
    
 })/* */
