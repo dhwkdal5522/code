@@ -1,7 +1,7 @@
 @import url(common.css);
 
 :root {
-    --header-h:100px;
+    --header-h:100px; /*유지보수 쉬움*/
 }
 @media screen and (max-width:1024px){
 :root {
@@ -58,7 +58,7 @@ header .util .search .search_open {
     display: block;
 }
 
-@media screen and (min-width:1025px){
+@media screen and (min-width:1025px){ /*??이거 왜..하지..?*/
     header .gnb .gnb_bg {
         display: none !important;
     }
@@ -70,7 +70,7 @@ header .util .search .search_open {
         display: flex;/*li좌우배치*/
     }
     header .gnb .gnb_wrap ul.depth1 > li  {
-        position: relative; /*ㅈ차메뉴 ul depth2정렬의 기준 */
+        position: relative; /*2차메뉴 ul depth2정렬의 기준 */
         z-index: 10;
      }
     header .gnb .gnb_wrap ul.depth1 > li > a {
@@ -176,7 +176,7 @@ header .util .search .search_open {
 
 }/*1024에서부터 모바일 스타일로 치환 - 1025px이상일 때 pc버전 스타일 메뉴*/
 }
-@media screen and (max-width:1024px){
+@media screen and (max-width:1024px){ /*1024부터 모바일버전 치환..?*/
     header {
     padding-right: 0;
     }
@@ -229,7 +229,7 @@ header .util .search .search_open {
         top: 25px;
         width: 20px;
         height: 12px;
-        background-image: url("data:image/svg+xml,%3Csvg width='21' height='13' viewBox='0 0 21 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.5558 2.33317L10.4998 12.3892L0.443847 2.33317L1.92223 0.854783L10.4998 9.43265L19.0774 0.854782L20.5558 2.33317Z' fill='%23666666'/%3E%3C/svg%3E%0A/");
+        background-image: url("data:image/svg+xml,%3Csvg width='21' height='13' viewBox='0 0 21 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.5558 2.33317L10.4998 12.3892L0.443847 2.33317L1.92223 0.854783L10.4998 9.43265L19.0774 0.854782L20.5558 2.33317Z' fill='%23666666'/%3E%3C/svg%3E ");
         background-repeat: no-repeat;
         background-position: center center;
         transition: 0.5s;

@@ -1,0 +1,48 @@
+@import url(common.css);
+
+:root {
+    --header-h:100px;
+}
+@media screen and (max-width:1024px){
+    :root {
+        --header-h:70px
+    }
+}
+@media screen and (max-width:768px){
+    :root {
+        --header-h:56px
+    }
+}
+
+header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: var(--header-h);
+    color: #fff;
+    padding: var(--content-margin);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo a {
+    display: block;
+    width: 44px;
+    height: 47px;
+    background: url(../images/menu_logo2_w.svg) no-repeat center center / contain;
+}
+header .util {
+    display: flex;
+}
+.visual {
+    height: 100dvh;
+    background: url(../images/menu_visual2.jpg) no-repeat center center / cover;
+}
+header .gnb .gnb_wrap {
+    width: 100%;
+}
+header .gnb .gnb_wrap ul.depth1 {
+    display: flex;
+}
