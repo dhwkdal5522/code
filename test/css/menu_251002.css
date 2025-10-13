@@ -41,6 +41,7 @@ header .logo a {
 header .util {
     display: flex;/*lang -search 좌우배치*/
 }
+/*lang, search는 close 안하는건가..?*/
 header .util .lang .lang_open {
     width: 40px;
     height: 40px;
@@ -58,7 +59,7 @@ header .util .search .search_open {
     display: block;
 }
 
-@media screen and (min-width:1025px){ /*??이거 왜..하지..?*/
+@media screen and (min-width:1025px){ /*??이거 왜..하지..? - 알거같음..*/
     header .gnb .gnb_bg {
         display: none !important;
     }
