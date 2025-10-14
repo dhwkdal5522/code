@@ -46,6 +46,34 @@ header .gnb .gnb_wrap {
 header .gnb .gnb_wrap ul.depth1 {
      display: flex;
 } 
+header .gnb .gnb_wrap ul.depth1 > li {
+    position: relative;
+}
+header .gnb .gnb_wrap ul.depth1 > li > a {
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: var(--header-h);
+    padding: 0 53px;
+    
+    background-color: red;
+}
+header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
+    position: absolute; /*자기가 있는 만큼만 들어가므로 넓이 100% 넣어야 함*/
+    left: 0;
+    top: var(--header-h);
+    width: 100%;
+    min-height: 228px; /*1차메뉴 영역 제외하고, 2차메뉴 높이만 */
+    color: #555;
+    background-color: yellow;
+    padding: 26px 0 0 0;
+}
+header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li > a {
+    display: block;
+    padding: 4px 0;/*행간은 대충 5px이면 맞음 캡쳐해서  맞춤*/
+    text-align: center;
+
+}
 header .gnb .gnb_open,
 header .gnb .gnb_close {
     display: none;
