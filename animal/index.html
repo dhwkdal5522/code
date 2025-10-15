@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script> <!--swiper js 라이브러리랑 css 가져와야함 -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <script src="js/main.js"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>유기동물보호소</title>
+</head>
+<body>
+    <div id ="wrap">
+        <header></header>
+        <main class="container">
+            <section class="visual">
+                <h2 class="blind">팝업</h2><!--스위퍼 영역의 이름이 팝업인거고 디자인상 보이지 않아서 blind처리 한 것-->
+                <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
+                    <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
+                        <li class="swiper-slide pop1">
+                            <div class="wrapper">
+                                <p>말은 없지만, <br>
+                                    마음은 전해집니다.</p><!--혼자있을 때는 p만 적어줘도 된다. 등급이 의미가 없다-->
+                            </div>
+                        </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
+                        <li class="swiper-slide pop2">
+                            <div class="wrapper">
+                                <p>기다리는 마음이 닿을 수 있도록, <br>
+                                    우리가 함께합니다.</p>
+                            </div>
+                        </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
+                        <li class="swiper-slide pop3">
+                            <div class="wrapper">
+                                <p>당신의 관심이 <br>
+                                    한 생명을 살릴 수 있습니다.</p>
+                            </div>
+                        </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
+                    </ul>
+                </div><!--swiper-->
+                <div class="ctrl_btn">
+                    <div class="paging">
+                        <div class="current">현재팝업번호</div>
+                        <div class="bar"><span></span></div>
+                        <div class="total">전체팝업번호</div>
+                    </div>
+                    
+                    <button class="stop">
+                        <span class="blind">일시정지</span>
+                        <i>
+                            <svg viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 14C9.45 14 8.97917 13.8042 8.5875 13.4125C8.19583 13.0208 8 12.55 8 12V2C8 1.45 8.19583 0.979167 8.5875 0.5875C8.97917 0.195833 9.45 0 10 0C10.55 0 11.0208 0.195833 11.4125 0.5875C11.8042 0.979167 12 1.45 12 2V12C12 12.55 11.8042 13.0208 11.4125 13.4125C11.0208 13.8042 10.55 14 10 14ZM2 14C1.45 14 0.979167 13.8042 0.5875 13.4125C0.195833 13.0208 0 12.55 0 12V2C0 1.45 0.195833 0.979167 0.5875 0.5875C0.979167 0.195833 1.45 0 2 0C2.55 0 3.02083 0.195833 3.4125 0.5875C3.80417 0.979167 4 1.45 4 2V12C4 12.55 3.80417 13.0208 3.4125 13.4125C3.02083 13.8042 2.55 14 2 14Z" fill="white"/>
+                            </svg>
+                                
+                        </i>
+                    </button>
+                    <button class="play">
+                        <span class="blind">재생</span>
+                        <i>
+                            <svg viewBox="0 0 11 14" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.675 6.1498C9.825 6.2498 9.9375 6.3748 10.0125 6.5248C10.0875 6.6748 10.125 6.83314 10.125 6.9998C10.125 7.16647 10.0875 7.3248 10.0125 7.4748C9.9375 7.6248 9.825 7.7498 9.675 7.8498L1.525 13.0248C1.44167 13.0748 1.35417 13.1123 1.2625 13.1373C1.17083 13.1623 1.08333 13.1748 1 13.1748C0.733333 13.1748 0.5 13.079 0.3 12.8873C0.1 12.6956 6.2653e-08 12.4581 8.74228e-08 12.1748L9.92249e-07 1.8248C1.01702e-06 1.54147 0.100001 1.30397 0.300001 1.1123C0.500001 0.920637 0.733334 0.824803 1 0.824804C1.08333 0.824804 1.17083 0.837304 1.2625 0.862304C1.35417 0.887304 1.44167 0.924804 1.525 0.974804L9.675 6.1498Z" fill="white"/>
+                            </svg>
+                                
+                        </i>
+                           </button>
+                </div>
+            </section><!--visual-->
+            <section class="find"></section>
+            <section class="slogan"></section>
+            <section class="adopt"></section>
+            <section class="review"></section>
+        </main>
+    </div>
+    
+</body>
+</html>

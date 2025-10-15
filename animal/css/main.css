@@ -1,0 +1,149 @@
+/* 251015_5시쯤부터 이해가 잘 안됨 */
+
+@import url(common.css);
+@import url(default.css);
+@import url(fonts.css);
+
+.visual {
+    position: relative;/*ctrl_btn 정렬의 기준*/
+}
+.visual .swiper-slide {
+    height: 100dvh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    display: flex;/*wrapper를 하단에 배치하기 위해*/
+    align-items: flex-end;
+}
+.visual .swiper-slide.pop1 {
+    background-image: url(../images/visual_bg1.jpg);
+}
+.visual .swiper-slide.pop2 {
+    background-image: url(../images/visual_bg2.jpg);
+}
+.visual .swiper-slide.pop3 {
+    background-image: url(../images/visual_bg3.jpg);
+}
+.visual .swiper-slide p {
+    font-size: 60px;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-title);
+    margin: 0px 0 calc(15dvh + 225px) 0;
+    transition: transform 1s, opacity 1s;
+    transition-delay: 0.3s;
+    transform: translate(0, -50px);
+    opacity: 0;
+}
+.visual .swiper-slide.swiper-slide-active p {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+.visual .ctrl_btn {
+    position: absolute;
+    left: calc(50% - 630px);
+    bottom: 28%;
+    z-index: 10;
+    display: flex;
+    color: #fff;
+    gap: 0 11px;
+}
+.visual .ctrl_btn .paging {
+    display: flex;
+    align-items: center;
+    gap: 0 9px;
+}
+.visual .ctrl_btn .paging .bar {
+    width: 144px;
+    height: 3px;
+    background-color: rgba(255, 255, 255, .3);
+    position: relative;
+}
+.visual .ctrl_btn .paging .bar span {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+}
+.visual .ctrl_btn .stop,
+.visual .ctrl_btn .play {
+    display: block;
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    background-color: var(--color-wite50);
+    display: flex;/* i태그를 가운데 배치 */
+    justify-content: center;
+    align-items: center;
+}
+.visual .ctrl_btn .play {
+    display: none; /*숨김처리*/
+}
+.visual .ctrl_btn .stop i {
+    display: block;
+    width: 12px;
+    margin: 4px 0 0 0;
+}
+.visual .ctrl_btn .play i {
+    display: block;
+    width: 10px;
+    margin: 2px 0 0 2px;
+}
+@media screen and (max-width:1320px){
+    .visual .ctrl_btn {
+        left: 30px;
+    }
+}
+@media screen and (max-width:768px){
+    .visual .ctrl_btn {
+        left: 16px;
+    }
+    .visual {
+        position: relative;/*ctrl_btn 정렬의 기준*/
+    }
+    .visual .swiper-slide {
+        height: 400px;
+    }
+    .visual .swiper-slide p {
+        font-size: 28px;
+        margin: 0 0 92px 0;
+        transform: translate(0, -20px);
+    }
+    .visual .ctrl_btn {
+        bottom: 38px;
+        gap: 0 6px;
+    }
+    .visual .ctrl_btn .paging .bar {
+        width: 86px;
+    }
+    .visual .ctrl_btn .stop,
+    .visual .ctrl_btn .play {
+        display: block;
+        width: 29px;
+        height: 29px;
+        border-radius: 50%;
+        background-color: var(--color-wite50);
+        display: flex;/* i태그를 가운데 배치 */
+        justify-content: center;
+        align-items: center;
+    }
+    .visual .ctrl_btn .play {
+        display: none; /*숨김처리*/
+    }
+    .visual .ctrl_btn .stop i {
+        display: block;
+        width: 12px;
+        margin: 4px 0 0 0;
+    }
+    .visual .ctrl_btn .play i {
+        display: block;
+        width: 10px;
+        margin: 2px 0 0 2px;
+    }
+}
+footer {
+    margin: 150px 0 0 0;
+}
