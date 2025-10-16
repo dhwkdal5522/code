@@ -146,7 +146,6 @@ header .util .mypage i {
         align-items: center;
         width: clamp(56px, 10vw, 100px);
         height: clamp(56px, 10vw, 100px);
-        background-color: blue;
     }
     header .gnb .gnb_open i {
         display: block;
