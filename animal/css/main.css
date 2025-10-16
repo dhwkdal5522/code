@@ -4,8 +4,181 @@
 @import url(default.css);
 @import url(fonts.css);
 
+header {
+    position: fixed; /*fixed는 무조건 body를 기준으로 정렬*/
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    height: var(--header-h);
+    color: #fff;
+    fill: #fff;
+    display: flex; /*logo-gnb-util좌우배치*/
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--wrapper-margin);
+}
+header .logo a {
+    display: block;
+    width: 179.82px;
+    height: 38.36px;
+    background: url(../images/logo_w.svg)no-repeat center center / contain;
+}
+header .util {
+    display: flex;
+}
+header .util .mypage,
+header .util .search .sch_open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33px;
+    height: 33px;
+}
+header .util .search .sch_open i {
+    display: block;
+    width: 19.04px;
+    padding: 6px 0 0 0;
+}
+header .util .mypage i {
+    display: block;
+    width: 17.33px;
+    padding: 4px 0 0 0;
+}
+/*************** 시작 pc 버전 메뉴 ***********************/
+/*1024이하는 메뉴가 접힘 1025 이상*/
+@media screen and (min-width:1025px){
+    header .gnb .gnb_wrap .gnb_close,
+    header .gnb .gnb_wrap .gnb_logo,
+    header .gnb .gnb_open {
+        display: none;/*모바일에서만 보임*/
+    }
+    header .gnb .gnb_wrap ul.depth1 {
+        display: flex; /*li좌우로 배치*/
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > a {
+        display: block;
+        font-size: 22px;
+        font-weight: var(--font-weight-bold);
+        line-height: var(--header-h);
+        padding : 0 1.5em; /*메뉴간 여백 */
+        white-space: nowrap;/*줄바꿈 금지 행간이 높아서 두 줄이 되면 이상함 그래서 무조건 1줄로 나오게 함 . */
+    }
+    header .gnb .gnb_wrap ul.depth1 > li {
+        position: relative;/*depth2 정렬의기준*/
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
+        position: absolute;/* li를 기준으로 정렬 */
+        left: 50%;/*li넓이의 50%*/
+        transform: translateX(-50%);/*나자신 ul.depth2의 넓이의 50%*/
+        top: calc(var(--header-h) - 13px);
+        background-color: var(--color-blue);
+        min-width: 100%;/*li넓이기준*/
+        padding: 27px 20px 28px 20px;
+        border-radius: 15px;
+        display: none;/*오버했을때만 나옴*/
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li > a {
+        display: block;
+        padding: 4px 0;
+        white-space: nowrap;/* 줄바꿈금지 */ 
+        text-align: center;
+        
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li > a > span {
+        position: relative; /*before 정렬의 기준 */
+    }
+   
+    header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li > a:hover {
+        font-weight: var(--font-weight-bold);
+    }
+
+    /* 메뉴에 오버했을 때 */
+    header.menu_pc {
+        background-color: #fff;
+        color: var(--color-title);
+        fill: var(--color-title);
+        border-bottom: 1px solid var(--color-line-long);
+    }
+    header.menu_pc .logo a {
+        background-image: url(../images/logo_b.svg);
+    }
+    header .gnb .gnb_wrap ul.depth1 > li.over > a {
+        color: var(--color-blue);
+        font-weight: var(--font-weight-bold);
+    }
+    header .gnb .gnb_wrap ul.depth1 > li.over > ul.depth2 { /*2차메뉴나옴*/
+        display: block;
+        color: #fff;
+    }
+}
+/*1025이상에서 1280 그 사이에서만 적용 되는거 (자주쓰는 브레이크 포인트 1280) */
+@media screen and (min-width:1025px) and (max-width:1280px) {
+    header .logo a {
+        width: 160px;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > a {
+        font-size: 22px;
+    }
+    
+    
+}
+/*************** 끝 pc 버전 메뉴 ********************** */
+/*************** 모바일 시작  ********************** */
+@media screen and (max-width:1024px){
+    header {
+        padding-right: 0;
+        height: clamp(56px, 10vw, 100px);
+    }
+    header .logo a {
+        /* width: 102.18px; 모바일 최소사이즈
+        height: 22.83px; */
+        width: clamp(102.18px, 17vw, 179.82px); 
+        /*최소값. 평소의 값, 최대값
+        100vw가 브라우저의 넓이 */
+    }
+    header .gnb .gnb_wrap {
+        display: none;
+    }
+    header .gnb .gnb_open {
+        display: flex; /* i 태그 가운데 정렬 */
+        justify-content: center;
+        align-items: center;
+        width: clamp(56px, 10vw, 100px);
+        height: clamp(56px, 10vw, 100px);
+        background-color: blue;
+    }
+    header .gnb .gnb_open i {
+        display: block;
+        width: 33%;
+        padding: 5px 0 0 0;
+    }
+    
+    header .util {
+        display: none;
+    }
+    header .gnb .gnb_wrap {
+        display: none;
+        position: absolute;/*header를 기준으로 정렬*/
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100dvh;
+        background-color: #fff;
+        color: var(--color-title);
+        fill: var(--color-title);
+    }
+
+    /*메뉴가 열렸을 때*/
+    header.menu_mo .gnb .gnb_wrap {
+        display: block;
+    }
+}
+header {
+    border-bottom : 1px solid red;
+}
 .visual {
-    position: relative;/*ctrl_btn 정렬의 기준*/
+    position: relative; /*ctrl_btn 정렬의 기준*/
 }
 .visual .swiper-slide {
     height: 100dvh;
@@ -26,7 +199,7 @@
     background-image: url(../images/visual_bg3.jpg);
 }
 .visual .swiper-slide p {
-    font-size: 60px;
+    font-size: clamp(28px, 4vw ,60px);
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-title);
     margin: 0px 0 calc(15dvh + 225px) 0;
@@ -108,7 +281,6 @@
         height: 400px;
     }
     .visual .swiper-slide p {
-        font-size: 28px;
         margin: 0 0 92px 0;
         transform: translate(0, -20px);
     }
@@ -145,5 +317,5 @@
     }
 }
 footer {
-    margin: 150px 0 0 0;
+    margin: 1500px 0 0 0;
 }

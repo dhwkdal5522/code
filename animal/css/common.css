@@ -12,12 +12,13 @@
     --color-blue : #0645DB;
     --color-bg : #061532;
     --color-top : #FDB900;
-    --header-h: 100px;
     --color-wite80 : rgba(255, 255, 255, .8);
     --color-wite50 : rgba(255, 255, 255, .5);
     --color-line-short:rgba(237, 237, 237, .2);
     --color-word-bg: rgba(255, 255, 255, .1);
-    --color-line-long:#F4F4F4;
+    --color-line-long:#EBE9F0;
+    --header-h: 100px;
+    --wrapper-margin : 30px
 }
 @media screen and (max-width:768px){
     :root {
@@ -27,6 +28,7 @@
         --font-weight-basic : 500;
         --font-weight-bold : 700;
         --header-h: 56px;
+        --wrapper-margin : 16px
     }
 }
 
@@ -69,20 +71,6 @@ body {
 @media screen and (max-width:1320px){
     .wrapper {
         width: auto;
-        margin: 0 30px; /*가운데 정렬*/
+        margin: 0 var(--wrapper-margin); /*가운데 정렬*/
     }
 }
-@media screen and (max-width:768px){
-    /*모든 페이지에서 중복되는 스타일*/
-
-.wrapper {
-    margin: 0 16px; /*가운데 정렬*/ 
-}
-#wrap {
-    min-width: 0; /*최소너비없음 */
-    position: relative;
-}
-.tit_gm {
-    font-size: 28px;
-}
-}/*@media*/

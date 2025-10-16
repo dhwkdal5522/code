@@ -1,0 +1,60 @@
+@import url(common.css);
+
+@media screen and (max-width:768px){
+    html, body {
+        font-size: 12px;
+    }
+}
+
+.btn1 {
+    margin: 50px 0 50px 0;
+}
+.btn1 button { 
+    background-color: #2F4CC3;
+    color: #fff;
+    fill: #fff;
+    display: flex;
+    gap: 0 5px;
+    padding: 12px 17px 12px 23px;
+    border-radius: 30px;
+}
+.btn1 button i {
+    display: block;
+    width: 14px; /*넓이만 주면 높이는 알아서 들어감..> 왜임..?*/
+}
+
+.btn2 {
+    margin: 50px 0 50px 0;
+}
+.btn2 button { /*글자크기 17px = 1em */
+    font-size: 25px;
+    background-color: #2F4CC3;
+    color: #fff;
+    fill: #fff;
+    display: flex;
+    gap: 0 0.2941em; /*여백은 em 단위로 많이 쓰는 이유 > 자동으로 비율에 맞게 줄어든다*/
+    padding: 0.7059em 1em 0.7059em 1.3529em;
+    border-radius: 1.7647em;
+}
+.btn2 button i {
+    display: block;
+    width: 0.8235em; /*넓이만 주면 높이는 알아서 들어감..> 왜임..?*/
+}
+
+.btn3 {
+    margin: 50px 0 50px 0;
+}
+.btn3 button { /*글자크기 17px = 1em */
+    font-size: 1.5rem;
+    background-color: #2F4CC3;
+    color: #fff;
+    fill: #fff;
+    display: flex;
+    gap: 0 0.2941rem; /*여백은 em 단위로 많이 쓰는 이유 > 자동으로 비율에 맞게 줄어든다*/
+    padding: 0.7059rem 1em 0.7059rem 1.3529rem;
+    border-radius: 1.7647rem;
+}
+.btn3 button i {
+    display: block;
+    width: 0.8235rem; /*넓이만 주면 높이는 알아서 들어감..> 왜임..?*/
+}
