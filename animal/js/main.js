@@ -7,7 +7,7 @@ $(document).ready(function(){
     let device_status // pc, mobile 
 
     function device_chk (){/*브라우저 리사이즈 될 때마다 체크 , 함수를 정의한다 (선언)*/ 
-        window_w = $(window).width()
+        window_w = $(window).width() // 현재 브라우저의 넓이를 구하라
         if(window_w > mobile_size){ //브라우저 넓이가 1024를 넘었다는 의미 : 즉 pc 버전임 
             device_status = 'pc' //글자는 따옴표
         }else{
