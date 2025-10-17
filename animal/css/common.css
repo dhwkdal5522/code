@@ -1,7 +1,5 @@
 :root {
     --font-size-basic : 17px;
-    --font-size-h2 : 40px;
-    --font-size-h3 : 24px;
     --font-weight-basic : 500;
     --font-weight-bold : 700;
     --line-height-basic : 1.5;
@@ -14,11 +12,13 @@
     --color-top : #FDB900;
     --color-wite80 : rgba(255, 255, 255, .8);
     --color-wite50 : rgba(255, 255, 255, .5);
-    --color-line-short:rgba(237, 237, 237, .2);
+    --color-line-short:#EDEDED;
     --color-word-bg: rgba(255, 255, 255, .1);
     --color-line-long:#EBE9F0;
     --header-h: 100px;
-    --wrapper-margin : 30px
+    --header-var: clamp(56px, 10vw, 100px);
+    --wrapper-margin : 30px;
+
 }
 @media screen and (max-width:768px){
     :root {

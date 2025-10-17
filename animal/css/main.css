@@ -128,7 +128,7 @@ header .util .mypage i {
 @media screen and (max-width:1024px){
     header {
         padding-right: 0;
-        height: clamp(56px, 10vw, 100px);
+        height: var(--header-var);
     }
     header .logo a {
         /* width: 102.18px; 모바일 최소사이즈
@@ -144,8 +144,8 @@ header .util .mypage i {
         display: flex; /* i 태그 가운데 정렬 */
         justify-content: center;
         align-items: center;
-        width: clamp(56px, 10vw, 100px);
-        height: clamp(56px, 10vw, 100px);
+        width: var(--header-var);
+        height: var(--header-var);
     }
     header .gnb .gnb_open i {
         display: block;
@@ -167,14 +167,85 @@ header .util .mypage i {
         color: var(--color-title);
         fill: var(--color-title);
     }
+    header .gnb .gnb_wrap ul.depth1 > li > a {
+        display: block;
+        font-size: 20px;
+        font-weight: var(--font-weight-bold);
+        line-height: var(--line-height-title);
+        color: var(--color-title);
+        padding: 21px 50px 21px var(--wrapper-margin);/*50px 화살표 아이콘 여백 - 글자잘리지 않게 하기 위함*/
+        position: relative;
+    }
 
+    header .gnb .gnb_wrap ul.depth1 > li > a::after {
+        content: "";
+        position: absolute;/*a를 기준으로 정렬*/
+        right: var(--wrapper-margin);
+        top: 50%;/*아이콘이 항상 정가운데 유지 (메뉴가 두줄인 경우에도) */
+        transform: translateY(-50%);
+        width: 15.8px;
+        height: 8.71px;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 10' fill='%231D1D1D' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.99936 7.04167L14.1244 0.916666C14.3327 0.708333 14.5757 0.607639 14.8535 0.614583C15.1313 0.621527 15.3744 0.729166 15.5827 0.937499C15.791 1.14583 15.8952 1.38889 15.8952 1.66667C15.8952 1.94444 15.791 2.1875 15.5827 2.39583L9.18686 8.8125C9.02019 8.97917 8.83269 9.10417 8.62436 9.1875C8.41603 9.27083 8.20769 9.3125 7.99936 9.3125C7.79103 9.3125 7.58269 9.27083 7.37436 9.1875C7.16603 9.10417 6.97853 8.97917 6.81186 8.8125L0.395193 2.39583C0.186859 2.1875 0.0861647 1.94097 0.0931091 1.65625C0.100054 1.37153 0.207692 1.125 0.416026 0.916667C0.624359 0.708334 0.867415 0.604167 1.14519 0.604167C1.42297 0.604167 1.66603 0.708334 1.87436 0.916667L7.99936 7.04167Z' /%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        color: var(--color-title);
+
+    }
+    header .gnb .gnb_wrap ul.depth1 {
+        margin: var(--header-var) 0 0 0; /*이거 임의여백*/
+        height: calc(100dvh - var(--header-var)); /*높이제한 > 화면 높이 - 메뉴영역 위 margin 100px 이거*/
+        overflow-y: auto; 
+        /*주어진 높이보다 콘텐츠가 짧으면 스크롤바가 안생기고, 주어진 높이보다 콘텐츠가 높으면 스크롤바가 생김 > 그래도 스크롤이 작동하지는 않음 -> 높이가 제한되야함*/
+        padding: 13px 0 0 0;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
+        margin: 2px var(--wrapper-margin) 23px var(--wrapper-margin);/*백색이 없으면 마진이어도 됨*/
+        color: var(--color-basic);
+        display: none;/*1차메뉴 클릭시에만 나옴*/
+    }
+     header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li {
+        border-bottom: 1px solid var(--color-line-short);
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li:last-child {
+        border-bottom: none;/*0 도됨 */
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li > a {
+        display: block;
+        padding: 7px 0 7px 16px;
+    }
+    header .gnb .gnb_wrap .gnb_logo {
+        /*display: none; /*ul.depth1 작업할때는 display none 처리하고 작업*/
+        position: absolute;/*gnb_wrap을 기준으로*/
+        left: var(--wrapper-margin);
+        top: 0;
+        width: clamp(102.18px, 17vw, 179.82px);
+        height: var(--header-var);/*헤더 높이가 들어가 줘야함.. > 메뉴에서는 반응형 *이거 마진높이*/
+        background: url(../images/logo_b.svg)no-repeat center center / contain;
+    }
+    header .gnb .gnb_wrap .gnb_close {
+        /*display: none; /*도 일단 숨김..왜냐하면 ul.depth1이 모든건 컨트롤 해야함..> ul.depth1 작업할때는 display none 처리하고 작업*/
+        position: absolute;/*gnb_wrap을 기준으로*/
+        right: 0;
+        top: 0;
+        width: var(--header-var);
+        height: var(--header-var);
+        display: flex; /*i 태그를 가운데로*/
+        justify-content: center;
+        align-items: center;
+    }
+    header .gnb .gnb_wrap .gnb_close i {
+        display: block;
+        width: 24.42%;
+    }
     /*메뉴가 열렸을 때*/
     header.menu_mo .gnb .gnb_wrap {
         display: block;
     }
-}
-header {
-    border-bottom : 1px solid red;
+    header .gnb .gnb_wrap .gnb_close i {
+        display: block;
+        fill: var(--color-blue);
+    }
 }
 .visual {
     position: relative; /*ctrl_btn 정렬의 기준*/
