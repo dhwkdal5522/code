@@ -176,7 +176,9 @@ header .util .mypage i {
         padding: 21px 50px 21px var(--wrapper-margin);/*50px 화살표 아이콘 여백 - 글자잘리지 않게 하기 위함*/
         position: relative;
     }
-
+     header .gnb .gnb_wrap ul.depth1 > li.open > a {
+        color: var(--color-blue);
+     }
     header .gnb .gnb_wrap ul.depth1 > li > a::after {
         content: "";
         position: absolute;/*a를 기준으로 정렬*/
@@ -190,7 +192,11 @@ header .util .mypage i {
         background-position: center center;
         background-size: contain;
         color: var(--color-title);
-
+        transition: 0.5s;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li.open > a::after {
+        transform: translateY(-50%) rotate(180deg);/*위에 똑같은게 있기 때문에 transform rotate 되면 취소 되므로, 한 번더 적어줘야한다.*/
+         background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 10' fill='%230645DB' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.99936 7.04167L14.1244 0.916666C14.3327 0.708333 14.5757 0.607639 14.8535 0.614583C15.1313 0.621527 15.3744 0.729166 15.5827 0.937499C15.791 1.14583 15.8952 1.38889 15.8952 1.66667C15.8952 1.94444 15.791 2.1875 15.5827 2.39583L9.18686 8.8125C9.02019 8.97917 8.83269 9.10417 8.62436 9.1875C8.41603 9.27083 8.20769 9.3125 7.99936 9.3125C7.79103 9.3125 7.58269 9.27083 7.37436 9.1875C7.16603 9.10417 6.97853 8.97917 6.81186 8.8125L0.395193 2.39583C0.186859 2.1875 0.0861647 1.94097 0.0931091 1.65625C0.100054 1.37153 0.207692 1.125 0.416026 0.916667C0.624359 0.708334 0.867415 0.604167 1.14519 0.604167C1.42297 0.604167 1.66603 0.708334 1.87436 0.916667L7.99936 7.04167Z' /%3E%3C/svg%3E%0A");
     }
     header .gnb .gnb_wrap ul.depth1 {
         margin: var(--header-var) 0 0 0; /*이거 임의여백*/

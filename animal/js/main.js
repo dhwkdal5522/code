@@ -106,4 +106,20 @@ $(document).ready(function(){
         $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('over') 
     })
     /****************** 끝 : PC 오버메뉴 **************** */
+     /****************** 시작 : 모바일버전 1차 메뉴 **************** *
+      * 닫혀있는 메뉴를 클릭하면 기존의 다른 메뉴를 닫고 나만 열기. (open클래스 추가)
+      * 열려있는 메뉴를 클릭하면 나 자신을 닫고 끝남 
+      * 열린 메뉴, 닫힌 메뉴를 구분하는 방법 -- open 있으면 열린메뉴, 없으면 닫힌메뉴
+      * 모바일 버전 1차 메뉴의 a 링크는 삭제 (pc 버전에서는 1차메뉴 누르면 2차 메뉴 첫번째 링크로 바로 가므로 모바일 버전에서만 적용) */
+     $('header .gnb .gnb_wrap ul.depth1 > li > a').on('click',function(e){
+		if (device_status == 'mobile'){ //모바일일 때만 적용
+            e.preventDefault();		/* a 태그의 href를 작동 시키지 않음 */ 
+            if($(this).parent().hasClass('open') == true){
+                console.log('열림')
+            }else{
+                console.log('닫힘')
+            }
+        }
+	});
+     /****************** 끝 : 모바일버전 1차 메뉴 **************** */
 })//
