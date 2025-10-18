@@ -46,6 +46,12 @@ header .util .mypage i {
     padding: 4px 0 0 0;
 }
 /*header가 fixed 되었을 때 */
+header {
+    transition: background-color 0.5s, color 0.5s, fill 0.5s;
+}
+header .logo a {
+    transition: background-image 0.5s;
+}
 header.fixed {
     background-color: #fff;
     color: var(--color-title);
@@ -154,6 +160,7 @@ header.fixed .logo a {
         align-items: center;
         width: var(--header-var);
         height: var(--header-var);
+        
     }
     header .gnb .gnb_open i {
         display: block;
