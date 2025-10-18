@@ -153,5 +153,19 @@ $(document).ready(function(){
      * 다시 맨 꼭대기로 올라가면 header에 fixed 클래스를 삭제
     */
 
+    let scrolling //스크롤된값
+    function scroll_chk(){
+        scrolling = $(window).scrollTop() //현재 스크롤값
+        if(scrolling > 0){
+            $('header').addClass('fixed')
+        }else{
+            $('header').removeClass('fixed')
+        }
+    }
+    scroll_chk() //문서가 로딩 되자마자 단 1번 실행
+    $(window).scroll(function(){ 
+        scroll_chk() // 스크롤 될 때마다 1번씩 실행
+    }) 
+    //test 할때는 html 에서 fixed를 지워야한다. 
     /****************** 끝 : 스크롤시 header에 fixed ****************/
 })//
