@@ -92,11 +92,16 @@ $(document).ready(function(){
             // console.log('오버') //focusin > ****1 ) 키보드 접근성
             $('header').addClass('menu_pc')
             $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('over') //***2 ) 키보드접근성 */
+            $('header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 ').hide()//pc 버전에서 display none이 자동으로 생긴경우
             $(this).addClass('over')
+            $(this).find('.depth2').slideDown() //pc 버전에서 display none이 자동으로 생긴경우
         }
     })
     $('header .gnb .gnb_wrap ul.depth1 > li').on('mouseleave',function(){ /*> li 가 있으면 옆에있는 li도 카운트함 */
-        $(this).removeClass('over')//** 키보드 접근성 : 번외 )) mouseleave 옆에 focusout 해서 header 배경을 없애주는건 안해줘도 상관은 없다.
+        if(device_status == 'pc'){ //pc에서만 작동되도록
+            $(this).removeClass('over')//** 키보드 접근성 : 번외 )) mouseleave 옆에 focusout 해서 header 배경을 없애주는건 안해줘도 상관은 없다.
+            $(this).find('.depth2').hide()
+        }
     })
     $('header').on('mouseleave',function(){ /*> li 가 있으면 옆에있는 li도 카운트함 */
         $(this).removeClass('menu_pc')
@@ -114,12 +119,39 @@ $(document).ready(function(){
      $('header .gnb .gnb_wrap ul.depth1 > li > a').on('click',function(e){
 		if (device_status == 'mobile'){ //모바일일 때만 적용
             e.preventDefault();		/* a 태그의 href를 작동 시키지 않음 */ 
-            if($(this).parent().hasClass('open') == true){
-                console.log('열림')
-            }else{
-                console.log('닫힘')
+            if($(this).parent().hasClass('open') == true){ //열려있는 메뉴를 다시 클릭했을 때, 
+                // console.log('열림')
+                $(this).parent().removeClass('open') //li에 open 클래스 삭제
+                $(this).next().slideUp() 
+            }else{ //열려있는 메뉴가 아닌 다른 메뉴를 여는 것 (닫힌메뉴)
+                // console.log('닫힘')
+                $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('open') //모든 li의 open을 삭제
+                //display block이 자동으로 형성되서 다른 버튼을 눌렀을 떄 닫히지 않음. 이때 아래 명령을 줘야함
+                $('header .gnb .gnb_wrap ul.depth1 > li > ul.depth2').slideUp() //모든 2차메뉴 닫기
+                $(this).parent().addClass('open')
+                $(this).next().slideDown() //2차메뉴 슬라이드로 열기
             }
         }
 	});
      /****************** 끝 : 모바일버전 1차 메뉴 **************** */
+      /****************** 시작 : 모바일버전 1차 메뉴 ****************
+       * 열기를 클릭하면 header에 menu_mo class 추가 
+       * header .gnb .gnb_open
+       * 닫기를 클릭하면 header에 menu_mo 클래스 삭제
+       * header .gnb .gnb_wrap .gnb_close
+       */
+      $('header .gnb .gnb_open').on('click', function(){
+        $('header').addClass('menu_mo')
+      })
+      $('header .gnb .gnb_close').on('click', function(){
+        $('header').removeClass('menu_mo')
+      })
+    /****************** 끝 : 모바일버전 1차 메뉴 ****************/
+    /****************** 시작 : 스크롤시 header에 fixed ***************
+     * pc/mobile 둘 다..
+     * 스크롤이 조금만 되도 header에 fixed 클래스를 줌 
+     * 다시 맨 꼭대기로 올라가면 header에 fixed 클래스를 삭제
+    */
+
+    /****************** 끝 : 스크롤시 header에 fixed ****************/
 })//
