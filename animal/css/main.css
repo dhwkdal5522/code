@@ -409,6 +409,81 @@ header.fixed .logo a {
         margin: 2px 0 0 2px;
     }
 }
+.find {
+    background-color: var(--color-bg);
+    color: #fff;
+    padding: 156px 0 126px 0;
+}
+.find h2 {
+    font-size: 40px;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-title);
+    text-align: center;
+}
+.find .tab_list {
+    margin: 39px 0 0 0;
+}
+.find .tab_list ul {
+    display: flex;/*li좌우*/
+    justify-content: center;
+    gap: 0 19px;
+}
+.find .tab_list ul li button {
+    display: block;
+    padding: 8px 27px 8px 27px;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: var(--line-height-title);
+}
+.find .tab_list ul li.active button {
+    background-color: var(--color-red);
+    color: #fff;
+
+}
+.find .tab_list ul li.item2.active button {
+    background-color: var(--color-blue);
+}
+.find .tab_content {
+    margin: 36px 0 0 0;
+    
+}
+.find .tab_content .tab_item {
+    position: relative;/* 버튼정렬의 기준 */
+}
+.find .tab_content .tab_item .prev {
+    position: absolute;
+    left: -25px;
+    top: 175px;
+    z-index: 10;
+    fill: var(--color-bg);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--color-wite60) ;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 14px 17px 13px 20px;
+}
+.find .tab_content .tab_item .next {
+    position: absolute;
+    right: -25px;
+    top: 175px;
+    z-index: 10;
+    fill: var(--color-bg);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--color-wite60) ;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 14px 17px 13px 20px;
+}
+.find .tab_content .tab_item .more {
+    position: absolute;
+    right: 0;
+    top: -20px;
+}
 footer {
     margin: 1500px 0 0 0;
 }
