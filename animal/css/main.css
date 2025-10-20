@@ -61,6 +61,9 @@ header.fixed {
 header.fixed .logo a {
     background-image: url(../images/logo_b.svg);
 }
+header.fixed .gnb .gnb_open i {
+    fill: var(--color-blue);
+}
 
 /*************** 시작 pc 버전 메뉴 ***********************/
 /*1024이하는 메뉴가 접힘 1025 이상*/
@@ -686,7 +689,7 @@ header.fixed .logo a {
 }
 
 .slogan h2 strong.center {
-    width: 2.6833em;
+    width: 2.2em;
     
 }
 .slogan h2 strong.center::before {
@@ -764,9 +767,12 @@ header.fixed .logo a {
     }  
 }
 .adopt { 
+    overflow-x: hidden;
     background-color: var(--color-bg);
     color: #fff;
+    fill : var(--color-bg);
     padding: clamp(87px, 13vw, 146px) 0 clamp(61px, 20vw, 225px);
+    position: relative;/*rolling정렬의기준*/
 }
 .adopt .tit h2 {
     text-align: center;
@@ -778,6 +784,125 @@ header.fixed .logo a {
 .adopt .list {
     margin: clamp(54px, 7vw, 74px) 0 0 0;
 }
+.adopt .list .swiper-slide {
+    width: clamp(237px, 20vw ,320px);
+}
+.adopt .list .swiper-slide a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;/*가운데*/
+    text-align: center;
+}
+.adopt .list .swiper-slide a .cate { 
+    background-color: var(--color-red);
+    border-radius: 30px;
+    padding: 0.2083em 1em 0.2083em 1em;
+    margin-top: -0.5em;/*마진은 마이너스값 가능*/
+}
+.adopt .list .swiper-slide a .cate.male {
+    background-color: var(--color-blue);
+}
+.adopt .list .swiper-slide a h3 {
+    font-size: var(--font-size-title2);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-title);
+    margin: 0.8333em 0 0 0;
+}
+.adopt .list .swiper-slide a p {
+    overflow: hidden;
+    line-height: 1.5;
+    height: 3em;/*행간*줄수 = 단위는 em*/
+    margin: 0 10% 0 10%;/*li넓이의 10%*/
+}
+.adopt .ctrl_btn {
+    margin: 4.0588em 0 2.1176em 0 ;
+    display: flex;
+    justify-content: center;
+    gap: 0 2.2353em;
+}
+.adopt .ctrl_btn .prev,
+.adopt .ctrl_btn .next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-wite60);
+    border-radius: 50%;
+}
+.adopt .ctrl_btn .prev i,
+.adopt .ctrl_btn .next i {
+    display: block;
+    width: 10.45px;
+    padding: 5px 0 0 0;
+    /*여백대신 vertical-align도 가능한데..가운데 안맞음..*/
+}
+.adopt .ctrl_btn .more a {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 12px 32px;
+    border: 1px solid var(--color-wite60);
+    border-radius: 30px ;
+
+}
+.adopt .list .swiper-slide a .photo {
+    overflow: hidden;
+    height: clamp(235px ,20vw ,318px);
+    border-radius: 50%;
+}
+.adopt .list .swiper-slide a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.adopt .rolling {
+    
+    position: absolute;/*adopt를 기준으로 정렬*/
+    left: 0;
+    bottom: 5%;
+    width: 100%;/*브라우저 넓이랑 동일하게*/
+    font-size: 128px;
+    background-color: red;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-title);
+    color: rgba(255, 255, 255, .1);
+    white-space: nowrap;/*줄바꿈금지*/
+}
+.adopt .rolling p {
+    position: absolute;/*rolling을 기준으로 정렬*/
+    left: 0;
+    bottom: 0;
+    animation: adopt_roll 100s linear infinite;
+    /*애니메이션이름 3초동안 */
+}
+@keyframes adopt_roll {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(-50.25%);} /*정확히 절반인 지점을 찾아야함 .. F12에서 기억못할거같다..10/20 5시30분*/
+}
+
+@media screen and (max-width:768px){
+    .adopt .list {
+        margin: 0 0 0 var(--wrapper-margin);
+    }
+    .adopt .ctrl_btn .prev,
+    .adopt .ctrl_btn .next {
+        display: none;
+        
+    }
+    .adopt .ctrl_btn .more a {
+        height: 36px;
+        padding: 5px 22px;
+        border: 1px solid var(--color-wite60);
+        border-radius: 30px ;
+
+    }
+    .adopt .rolling {
+        display: none;
+    }
+}
+
 footer {
-    margin: 1500px 0 0 0;
+    margin: 500px 0 0 0;
 }
