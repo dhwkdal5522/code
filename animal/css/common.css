@@ -1,5 +1,7 @@
 :root {
     --font-size-basic : 17px;
+    --font-size-title : clamp(22px, 3.5vw, 40px);
+    --font-size-title2 : clamp(20px, 2vw, 24px);
     --font-weight-basic : 500;
     --font-weight-bold : 700;
     --line-height-basic : 1.5;
