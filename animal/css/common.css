@@ -59,7 +59,7 @@ body {
 그 글자를 안보이게 하고 싶을 때 blind class를 주면 사라짐*/
 .blind {
     position: absolute; /*after top이 없어서 위치가 어딘가 날라감*/
-    clip: rect(0 0 0 0);/*그림을 그리는건데 0size?*/
+    clip: rect(0, 0, 0, 0);/*그림을 그리는건데 0size?*/
     width: 1px;
     height: 1px; /*사이즈를 만들고 마진으로 사라지게 만들고 잘라냄*/
     margin: -1px;
