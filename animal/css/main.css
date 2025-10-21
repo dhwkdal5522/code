@@ -276,6 +276,29 @@ header.fixed .gnb .gnb_open i {
 .visual {
     position: relative; /*ctrl_btn 정렬의 기준*/
 }
+.visual .spin {
+    position: absolute;
+    right: 3%;
+    bottom: 3%;
+    /* mix-blend-mode: difference; */
+    z-index: 20;
+    animation: spin 10s linear infinite;
+    /*애니메이션 이름 . 1번 실행하는데 걸리는 시간, 가속도, 무한반복 */
+}
+/*10/21 -3시 넘어서 가운데에 화살표 넣는거 안됨*/
+.visual .spin  .spin_txt {
+    animation: spin 10s linear infinite;
+}
+.visual .spin .center_txt {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(50%,50%);
+}
+@keyframes spin {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}
 .visual .swiper-slide {
     height: 100dvh;
     background-position: center center;
@@ -646,6 +669,12 @@ header.fixed .gnb .gnb_open i {
 .slogan {
     margin: clamp(90px, 16vw, 203px) 0 clamp(63px, 9vw, 119px) 0 ;
     text-align: center;
+}
+.slogan .spin {
+    position: absolute;
+    left: 10px;
+    top: 50px;
+    transform: translateY(-50%);
 }
 .slogan h2 {
     font-size: clamp(28px, 6vw, 60px);
