@@ -350,24 +350,182 @@ footer .f_util .family_site {
     width: 186px;
     /*관련사이트는 여는 버튼, 바로가기 사이트 등의 넓이가 같음
     그래서 감싸고 있는 family_site에 넓이를 주고 내부요소는 그에 100%를 꽉차게줌*/
+    position: relative;/*family_wrap정렬의 기준*/
 }
-footer .f_util .family_site .open {
+footer .f_util .family_site .family_open,
+footer .f_util .family_site .family_close {
     display: block;
     width: 100%;
     height: 43px;
     text-align: left;
     padding: 5px 0 0 16px;/*line-height으로 가운데 안맞으면 패딩으로 줌. 절대 아래값은 주면 안된다. 아래주면 높이가 늘어날 수 있음*/
     background-color: #3d3d3d;
+    position: relative;
+}
+footer .f_util .family_site .family_open::after,
+footer .f_util .family_site .family_close::after  {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 6.87px;
+    height: 11.67px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 footer .f_util .family_site .family_wrap {
+    /* display: none; */
+    position: absolute;
+    left: 0;
+    bottom: calc(2.5294em+1px);/*하단에 버튼을 포함한 높이*/
+    width: 100%;
+    background-color: #3d3d3d;
+    padding: 1.1765em 1.1176em 1.0588em 1.1176em;
+}
+footer .f_util .family_site .family_wrap ul li a {
+    display: block;
+    padding: 0.1765em 0 ;
+}
+footer .f_util .family_site .family_wrap ul li a span {
+    position: relative;
+}
+
+footer .f_util .family_site .family_wrap ul li a span::after {
+    content: "";
+    position: absolute;
+    right: -15px;
+    top: 7px;
+    width: 10.5px;
+    height: 10.5px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_25_1423' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='14' height='14'%3E%3Crect width='14' height='14' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_25_1423)'%3E%3Cpath d='M1.75 12.25V1.75H7V2.91667H2.91667V11.0833H11.0833V7H12.25V12.25H1.75ZM5.65833 9.15833L4.84167 8.34167L10.2667 2.91667H8.16667V1.75H12.25V5.83333H11.0833V3.73333L5.65833 9.15833Z' fill='white' fill-opacity='0.6'/%3E%3C/g%3E%3C/svg%3E%0A");
+
+}
+footer .f_util .family_site.open .family_open {
     display: none;
 }
-footer .f_util .family_site .close {
-    display: none;
+footer .f_util .family_site.open .family_close {
+    display: block;
 } 
+footer .f_util .family_site.open .family_wrap {
+    display: block;
+}
+footer .f_util .family_site.open .family_close::after {
+    animation: family_btn 0.5s 1 forwards;
+}
+@keyframes family_btn {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(180deg);}
+}
 footer .f_util .top {
     height: 43px;
     line-height: 43px;
     padding: 2px 16px 0 16px;
     background-color: var(--color-main);
+}
+footer .inner  {
+    margin: 14px 0 0 0;
+}
+footer .inner .f_nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 2.1765em;
+}
+footer .inner .f_info {
+    margin: 31px 0 0 0;
+}
+@media screen and (max-width:1280px){
+    footer .inner .f_nav ul {
+        gap: 0 1.5em;
+    }
+}
+@media screen and (max-width:1024px){
+    footer {
+        padding: 51px 0 68px 0;
+     }
+     footer .wrapper { 
+         display: block;/*f_logo - inner 좌우배치 */
+         
+     }
+     footer .f_logo {
+         width: 87px;
+         height: 29px;
+     }
+     footer .f_util {
+         position: relative;/*absolute해제*/
+         right: auto;
+         top: auto;
+         margin: 32px 0 52px 0;
+     }
+     footer .f_util .family_site { 
+         width: calc(100% - 73px);
+         max-width: 450px;
+     }
+     footer .f_util .family_site .family_open,
+     footer .f_util .family_site .family_close {
+         display: block;
+         width: 100%;
+         height: 43px;
+         text-align: left;
+         padding: 5px 0 0 16px;/*line-height으로 가운데 안맞으면 패딩으로 줌. 절대 아래값은 주면 안된다. 아래주면 높이가 늘어날 수 있음*/
+         background-color: #3d3d3d;
+         position: relative;
+     }
+     footer .f_util .family_site .family_open::after,
+     footer .f_util .family_site .family_close::after  {
+         content: "";
+         position: absolute;
+         right: 0;
+         top: 0;
+         width: 6.87px;
+         height: 11.67px;
+         background-position: center center;
+         background-repeat: no-repeat;
+         background-size: contain;
+     }
+     footer .f_util .family_site .family_wrap {
+         /* display: none; */
+         position: absolute;
+         left: 0;
+         bottom: calc(2.5294em+1px);/*하단에 버튼을 포함한 높이*/
+         width: 100%;
+         background-color: #3d3d3d;
+         padding: 1.1765em 1.1176em 1.0588em 1.1176em;
+     }
+     footer .f_util .family_site .family_wrap ul li a {
+         display: block;
+         padding: 0.1765em 0 ;
+     }
+     footer .f_util .family_site .family_wrap ul li a span {
+         position: relative;
+     }
+     
+     footer .f_util .family_site .family_wrap ul li a span::after {
+         content: "";
+         position: absolute;
+         right: -15px;
+         top: 7px;
+         width: 10.5px;
+         height: 10.5px;
+         background-position: center center;
+         background-repeat: no-repeat;
+         background-size: contain;
+         background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_25_1423' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='14' height='14'%3E%3Crect width='14' height='14' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_25_1423)'%3E%3Cpath d='M1.75 12.25V1.75H7V2.91667H2.91667V11.0833H11.0833V7H12.25V12.25H1.75ZM5.65833 9.15833L4.84167 8.34167L10.2667 2.91667H8.16667V1.75H12.25V5.83333H11.0833V3.73333L5.65833 9.15833Z' fill='white' fill-opacity='0.6'/%3E%3C/g%3E%3C/svg%3E%0A");
+     
+     }
+     footer .f_util .family_site.open .family_open {
+         display: none;
+     }
+     footer .f_util .family_site.open .family_close {
+         display: block;
+     } 
+     footer .f_util .family_site.open .family_wrap {
+         display: block;
+     }
+     footer .f_util .family_site.open .family_close::after {
+         animation: family_btn 0.5s 1 forwards;
+     }
 }
