@@ -546,7 +546,7 @@ section .tit h2 {
     margin: 145px 0 0 0;
 }
 .service .tit {
-    display: none;
+    display: block;
 }
 .service .list {
     background: url(../images/main/service_bg01.jpg) no-repeat center center / cover;
@@ -629,7 +629,96 @@ section .tit h2 {
     background-size: contain;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 11 8' fill='%23ffffff' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.6665 1.27146e-07L10.6665 4L6.6665 8L5.73317 7.03333L8.09984 4.66667L-0.000161833 4.66667L-0.000161717 3.33333L8.09984 3.33333L5.73317 0.966667L6.6665 1.27146e-07Z' /%3E%3C/svg%3E%0A");
 }
-
-footer {
-    margin: 1500px 0 0 0;
+@media screen and (min-width:1025px) and (max-width:1280px){ 
+    /*120~1024사이일경우*/
+    .service .list ul li a h3 {
+        font-size: 22px;
+    }
+}/**/
+@media screen and (max-width:1024px){ 
+    /*120~1024사이일경우*/
+    .service {
+        margin: 92px 0 0 0 ;
+    }
+   
+    .service .list {
+        margin: 34px var(--wrapper-margin) 0 var(--wrapper-margin) ;
+        background: url(../images/main/service_mo.jpg)no-repeat center center / cover;
+        color: #fff;
+        padding: 52px var(--wrapper-margin) 52px var(--wrapper-margin);
+    }
+    .service .list ul {
+        display: flex;
+        gap: 0 16px;
+    }
+    .service .list ul li {
+        width: 33.33%;
+        height: 59px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        /* margin: 0 0 8px 0; */
+    }
+    .service .list ul li:last-child {
+        margin-bottom: 0;
+    }
+    .service .list ul li a {
+        display: block;
+        padding: 19px 16px 16px 16px;
+        position: relative;
+    }
+    .service .list ul li a::after {
+        content: "";
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 8px;
+        background-image: url("data:image/svg+xml,%3Csvg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 -2.62268e-07L8 3L5 6L4.3 5.275L6.075 3.5L2.12591e-06 3.5L2.21333e-06 2.5L6.075 2.5L4.3 0.725L5 -2.62268e-07Z' fill='%23555555'/%3E%3C/svg%3E%0A");
+    }
+    .service .list ul li a .h3 {
+        margin: 10px 0 0 0;
+    }
+    .service .list ul li a .more {
+        display: none;
+    }
+    .service .list ul li a strong {
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 1.3;
+        color: var(--color-title);
+    }
+    .service .list ul li a h3,
+    .service .list ul li a .more {
+        display: none;
+    }
+    .service .list ul li a strong {
+        font-weight: 700;
+    }
+}/**/
+@media screen and (max-width:768px){
+    .service .list ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .service .list ul li {
+        width: 100%;
+    }
+    .service .list ul li a {  
+        display: block;
+        text-align: left;
+        padding: 19px 16px 16px 16px;
+    }  
+    .service .list ul li a::after {
+        right: 16px;
+        transform: translateX(0);
+        top: 16px;
+        bottom: auto;
+    }
+    .service .list ul li a strong {
+        font-size: 1.6rem;
+    }
 }
